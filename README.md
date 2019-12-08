@@ -1,5 +1,5 @@
 # Nashville Software School Front End Capstone: Bike Stash Nash
-This application allows users see where bike racks are located in Nashville. Data is crowd-sourced by users and stored in JSON. The user can log in and add, edit, and delete bike racks they have seen around town--name, address, and picture. A map on the home page shows the user where  ALL the added racks are, not just theirs. 
+This application allows users see where bike racks are located in Nashville. Data is crowd-sourced by users and stored in JSON. The user can log in and add, edit, and delete bike racks they have seen around town. A map on the home page shows the user where  ALL the added racks are, not just theirs. 
 
 ## Why I Made This
 I made this application because I thought it would be useful. I ride my bike around town, and I think it would be nice to see if wherever I'm going has a bike rack, or if I'm going to have to ride around for a minute and lock my bike to a random parking meter/skinny tree/wrought iron fence.
