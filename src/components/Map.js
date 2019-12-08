@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import L from 'leaflet';
+import API from '../modules/data'
 
 const dummyDataPath = [
   [36.134842046153565, -86.75954818725587],
@@ -28,11 +29,38 @@ export default class Map extends Component {
     }).addTo(this.map);
 
   
+//get map locations from JSON
+API.getAllRacks()
+.then(racks => racks.forEach(rack => {
+  // const latitude = rack.latitude
+  // const longitude = rack.longitude
+  console.log(rack)
+L.marker([rack.latitude, rack.longitude])
+.bindPopup(`Name: ${rack.name}`)
+.addTo(this.map)
+  
+})
+  //take each rack and add the information to a popup
+)
+    //   L.marker([coords.latitude, coords.longitude])
+    //     .bindPopup('This is your current <strong>location</strong>')
+    //     .addTo(this.map);
 
 
+//Loop through the markers array
+// for (var i=0; i<markers.length; i++) {
+ 
+//   var lon = markers[i][0];
+//   var lat = markers[i][1];
+//   var popupText = markers[i][2];
+  
+//    var markerLocation = new L.LatLng(lat, lon);
+//    var marker = new L.Marker(markerLocation);
+//    map.addLayer(marker);
 
+//    marker.bindPopup(popupText);
 
-
+// }
     // navigator.geolocation.getCurrentPosition(position => {
     //   const coords = position.coords;
     //   this.map.setView([coords.latitude, coords.longitude], 16);

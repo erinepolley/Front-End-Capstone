@@ -1,19 +1,59 @@
 {
-    "posts": [
+    "users": [
       {
         "id": 1,
-        "title": "json-server",
-        "author": "typicode"
+        "email": "hooterbrown@hotmail.com",
+        "password": "hi"
+      },
+
+      {
+        "id": 2,
+        "email": "mustachemike@hotmail.com",
+        "password": "hello"
+      },
+
+      {
+        "id": 3,
+        "email":"gary@gmail.com",
+        "password": "yo"
       }
     ],
-    "comments": [
+
+    "racks": [
       {
         "id": 1,
-        "body": "some comment",
-        "postId": 1
+        "userId": 1,
+        "image": null,
+        "capacity": 6,
+        "address": "4324 Harding Pike",
+        "longitude":  -86.8766429,
+        "latitude": 36.0968686,
+        "name": "Publix",
+        "comments": "If you're facing the entrance, they're on the left."
+      },
+
+      {
+        "id": 2,
+        "userId": 2,
+        "image": null,
+        "capacity": 4,
+        "address": "4408 Charlotte Pike",
+        "longitude": -86.8406162,
+        "latitude": 36.1521963,
+        "name": "ML Rose",
+        "comments": "On the left if you're looking at the building. Wooden posts."
+      },
+
+      {
+        "id": 3,
+        "userId": 3,
+        "image": null,
+        "capacity": 4,
+        "address": "1736 Arthur Ave",
+        "longitude": -86.8030241763513,
+        "latitude": 36.1789187049862,
+        "name": "Elizabeth Park",
+        "comments": "Beside the basketball courts."
       }
-    ],
-    "profile": {
-      "name": "typicode"
-    }
+    ]
   }
