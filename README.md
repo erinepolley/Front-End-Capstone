@@ -24,7 +24,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 1. Clone down the repo: `git@github.com:erinepolley/Front-End-Capstone.git`
 2. Run `npm install` for dependencies.
-3. In the api directory, run `json-server -p 5002 database.json`.
+3. In the api directory, run `json-server -p 5002 racks.json`.
 3. Run `npm start` in the root directory.
 
 
