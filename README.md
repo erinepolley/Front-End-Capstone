@@ -1,8 +1,30 @@
+# Nashville Software School Front End Capstone: Bike Stash Nash
+This application allows users see where bike racks are located in Nashville. Data is crowd-sourced by users. The user can log in and add, edit, and delete bike racks they have seen around town--name, address, and picture. A map on the home page shows the user where  ALL the added racks are, not just theirs. 
+
+## Why I Made This
+I made this application because I thought it would be useful. I ride my bike around town, and I think it would be nice to see if wherever I'm going has a bike rack, or if I'm going to have to ride around for a minute and lock my bike to a random parking meter/skinny tree/wrought iron fence.
+
+## MVP
+-Create account/account login
+-Map which renders all rack locations as pins
+-Can click on pins to display a popup with details
+-Nav bar with "Home", “My Racks”, “Logout”, “Add a Rack”
+-“My Racks”--gets all racks from JSON that the user has added (with edit and delete capabilities)
+-“Add a Rack”--renders form for user to add rack
+-When posted, routed back to map and rack appears on map
+
+## Tools Used
+React, JSON, Leaflet, Mapbox
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ![Front End Capstone ERD](https://user-images.githubusercontent.com/55988070/69775674-129bff00-115f-11ea-94b5-b8ab7807d814.png)
 
-## Available Scripts
+## To See This Application:
+
+1. Clone down the repo. 
+2. Run `npm install` for dependencies.
+3. `npm start`. 
 
 In the project directory, you can run:
 
@@ -11,60 +33,7 @@ In the project directory, you can run:
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
