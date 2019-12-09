@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import L from 'leaflet';
+import API from '../../modules/Data'
+import GovData from '../../modules/GovData'
 
 const dummyDataPath = [
   [36.134842046153565, -86.75954818725587],
@@ -7,6 +9,17 @@ const dummyDataPath = [
   [36.13009351246281, -86.75499916076662],
   [36.12957358256369, -86.75461292266846]
 ];
+
+const customIcon = L.icon({
+  iconUrl: 'custommarker.png',
+  shadowUrl: 'marker-shadow.png',
+
+  iconSize:     [38, 95], // size of the icon
+  shadowSize:   [50, 64], // size of the shadow
+  // iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+  // shadowAnchor: [4, 62],  // the same for the shadow
+  // popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+})
 
 export default class Map extends Component {
   map = null;
@@ -28,11 +41,43 @@ export default class Map extends Component {
     }).addTo(this.map);
 
   
+//get map locations from JSON
+API.getAllRacks()
+.then(racks => racks.forEach(rack => {
+  // const latitude = rack.latitude
+  // const longitude = rack.longitude
+  // console.log(rack)
+  //take each rack and add the information to a popup
+L.marker([rack.latitude, rack.longitude], {icon: customIcon})
+.bindPopup(`Name: ${rack.name}`)
+.addTo(this.map)
+})
+
+)//**BASE CODE FOR RENDERING TO MAP FROM LEAFLET
+    //   L.marker([coords.latitude, coords.longitude])
+    //     .bindPopup('This is your current <strong>location</strong>')
+    //     .addTo(this.map);
+
+//Gets data from the external Nashville.gov API with all city-provided racks
+    GovData.getData()
+    .then(govRacks => govRacks.forEach(govRack => {
+      // console.log(govRack)
+      L.marker([govRack.the_geom.coordinates[1], govRack.the_geom.coordinates[0]])
+      .bindPopup(
+        `Name: ${govRack.location} <br>
+        Address: ${govRack.detail_loc} <br>
+        Capacity: ${govRack.capacity} <br>
+        Comments: ${govRack.location}`
+        )
+        .addTo(this.map)
+    })
+    )
+
+//Loop through the markers array
+// for (var i=0; i<markers.length; i++) {
 
 
-
-
-
+// }
     // navigator.geolocation.getCurrentPosition(position => {
     //   const coords = position.coords;
     //   this.map.setView([coords.latitude, coords.longitude], 16);
