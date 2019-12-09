@@ -18,7 +18,7 @@ React, JSON, Leaflet, Mapbox
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
-![Front End Capstone ERD](https://user-images.githubusercontent.com/55988070/69775674-129bff00-115f-11ea-94b5-b8ab7807d814.png)
+![Front End Capstone ERD](ERD.png)
 
 ## To See This Application:
 
