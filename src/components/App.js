@@ -2,14 +2,52 @@ import React, { Component } from 'react';
 import ApplicationViews from './ApplicationViews'
 import NavBar from './nav/NavBar'
 import './App.css';
+import Data from '../modules/Data'
 
 export default class App extends Component {
-  render() {
-    return (
-      <>
-        <NavBar />
-        <ApplicationViews />
-      </>
-    )
+
+    // user doesn't exist by default
+    state = {
+      user: false
+    }
+  
+    // isAuthenticated checks if credentials are in local storage
+    // returns true/false
+    isAuthenticated = () => localStorage.getItem("credentials") !== null
+  
+    //passing this as props to app views and nav bar
+    setUser = (result) => {
+      console.log("RESULT IN SET USER", result)
+      localStorage.setItem("credentials", result.id)
+      this.setState({
+        user: this.isAuthenticated()
+      });
+    }
+  
+    clearUser = () =>  {
+      localStorage.removeItem("credentials")
+      this.setState({
+        user: this.isAuthenticated()
+      })
+    }
+  
+    componentDidMount(){
+      this.setState({
+        user: this.isAuthenticated()
+      })
+    }
+  
+    render() {
+      return (
+        <React.Fragment>
+          <NavBar           user={this.state.user}
+                            setUser={this.setUser} 
+                            handleLogin={this.handleLogin}/>
+          <ApplicationViews user={this.state.user}
+                            setUser={this.setUser} 
+                            handleLogin={this.handleLogin}/>
+        </React.Fragment>
+      );
+    }
   }
-}
+

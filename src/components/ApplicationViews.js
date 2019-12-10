@@ -12,27 +12,44 @@ export default class ApplicationViews extends Component {
         return (
             <>
 <Route path="/login" render={(props) => {
-     return <Login setUser={this.props.setUser} {...props} />
+     return <Login setUser={this.props.setUser} {...props} {...this.props} />
  }} />
 
 <Route path="/signup" render={(props) => {
-     return <Signup setUser={this.props.setUser} {...props} />
+     return <Signup setUser={this.props.setUser} {...props} {...this.props} />
  }} />
 
+
  <Route exact path="/" render={(props) => {
-     return <Map />
+     if (this.props.user) {
+     return <Map {...props} {...this.props} />
+     } else {
+        return <Redirect to="login" />  
+     }
  }} />
 
 <Route path="/myracks" render={(props) => {
-     return <MyRacks />
+     if (this.props.user) {
+     return <MyRacks {...props} {...this.props}/> 
+    } else {
+        return <Redirect to="login" />
+    }
  }} />
 
 <Route path="/add" render={(props) => {
-     return <AddRack />
+      if (this.props.user) {
+        return <AddRack {...props} {...this.props}/> 
+     } else {
+        return <Redirect to="login" />
+    }
  }} />
 
 <Route path="/edit" render={(props) => {
-     return <EditRack />
+      if (this.props.user) {
+        return <EditRack {...props} {...this.props}/> 
+      } else {
+        return <Redirect to="login" />
+     }
  }} />
 
 <Route path="/logout" render={(props) => {
