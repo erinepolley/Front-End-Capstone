@@ -1,13 +1,15 @@
-import React from 'react';
-import Map from './maps/Map';
+import React, { Component } from 'react';
+import ApplicationViews from './ApplicationViews'
+import NavBar from './nav/NavBar'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <Map />
-    </div>
-  )
+export default class App extends Component {
+  render() {
+    return (
+      <>
+        <NavBar />
+        <ApplicationViews />
+      </>
+    )
+  }
 }
-
-export default App;
