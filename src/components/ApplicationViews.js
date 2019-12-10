@@ -4,11 +4,16 @@ import Map from './map/Map'
 import MyRacks from './racks/MyRacks'
 import EditRack from './racks/EditRack'
 import AddRack from './racks/AddRack'
+import Login from '.auth/Login'
 
 export default class ApplicationViews extends Component {
     render() {
         return (
             <>
+<Route path="/login" render={(props) => {
+     return <Login setUser={this.props.setUser} {...props} />
+ }} />
+
  <Route path="/" render={(props) => {
      return <Map />
  }} />
