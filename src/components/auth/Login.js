@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-
+import Data from '../../modules/Data'
 export default class Login extends Component {
     state = {
         email: "",
@@ -11,14 +11,23 @@ handleFieldChange = (event) => {
     stateToChange[event.target.id] = event.target.value
     this.setState(stateToChange)
   }
+//When the user submits the form, 
+// do a fetch call to see if any user in 
+// API matches. If so, logs user in. 
+// If not, alert.
 
-  handleSignup = (event) => {
+  handleLogin = (event) => {
     event.preventDefault()
-    this.props.setUser({
-      email: this.state.email,
-      password: this.state.password
-    })
-    this.props.history.push("/")
+    Data.checkUser(this.state.email, this.state.password)
+        .then(userArrObj =>{
+            console.log("RESULT FRESH FROM API", userArrObj)
+            if(userArrObj.length>0) {
+                this.props.setUser(userArrObj[0])
+                this.props.history.push("/")
+            } else {
+                alert("Incorrect information. Please try again.")
+            }
+        })
   }
 
     render() {
