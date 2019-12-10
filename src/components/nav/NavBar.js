@@ -4,6 +4,13 @@ import './NavBar.css'
 
 export default class NavBar extends Component {
 
+handleLogout () {
+    localStorage.removeItem("credentials")
+    // this.props.history.push("/login")
+   
+
+}
+
     render() {
         return (
             <>
@@ -20,7 +27,11 @@ export default class NavBar extends Component {
                  <li><Link className="nav-link" to="/">Home</Link></li>
                  <li><Link className="nav-link" to="/myracks">My Racks</Link></li>
                  <li><Link className="nav-link" to="/add">Add Rack</Link></li>
-                 <li><Link className="nav-link" to="/logout">Log Out</Link></li>
+                 <Link className="nav-link" to="/login">
+                 <li onClick={this.handleLogout}>
+                         Log Out
+                     </li>
+                     </Link>
             </ul>       
             </nav> 
             </header>

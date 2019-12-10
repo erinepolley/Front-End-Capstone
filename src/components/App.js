@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ApplicationViews from './ApplicationViews'
 import NavBar from './nav/NavBar'
 import './App.css';
-import Data from '../modules/Data'
+// import Data from '../modules/data'
 
 export default class App extends Component {
 
@@ -40,7 +40,9 @@ export default class App extends Component {
     render() {
       return (
         <React.Fragment>
-          <NavBar           user={this.state.user}
+          <NavBar           {...this.props}
+          // {...props}
+                            user={this.state.user}
                             setUser={this.setUser} 
                             handleLogin={this.handleLogin}/>
           <ApplicationViews user={this.state.user}

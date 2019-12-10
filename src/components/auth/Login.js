@@ -23,6 +23,7 @@ handleFieldChange = (event) => {
             console.log("RESULT FRESH FROM API", userArrObj)
             if(userArrObj.length>0) {
                 this.props.setUser(userArrObj[0])
+                
                 this.props.history.push("/")
             } else {
                 alert("Incorrect information. Please try again.")
