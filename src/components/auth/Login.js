@@ -37,6 +37,7 @@ handleFieldChange = (event) => {
           <form onSubmit={this.handleLogin}>
             <fieldset>
                 <h1>Bike Stash</h1>
+                <img src={require('../BikeIcon.svg')} alt="Bike Stash icon" />
                 <h2>Welcome!</h2>
                 <h3>Please sign in.</h3>
                 <div className="formgrid">
