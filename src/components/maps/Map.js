@@ -46,7 +46,7 @@ export default class Map extends Component {
       .then(racks => racks.forEach(rack => {
         // const latitude = rack.latitude
         // const longitude = rack.longitude
-        // console.log(rack)
+        console.log("RACK ON MAPS PAGE FROM GET ALL RACKS", rack)
         //take each rack and add the information to a popup
         L.marker([rack.latitude, rack.longitude])
           .bindPopup(

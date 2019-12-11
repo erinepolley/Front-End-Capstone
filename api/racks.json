@@ -59,22 +59,16 @@
       "comments": "Beside the basketball courts."
     },
     {
-      "userId": "4",
-      "capacity": "6",
-      "address": "1907 Eastland Ave",
-      "establishmentName": "",
-      "establishmentTypeId": "",
-      "comments": "near side",
-      "id": 4
-    },
-    {
       "userId": 4,
-      "capacity": "lala",
-      "address": "lala",
-      "establishmentName": "lala",
-      "establishmentTypeId": "lala",
-      "comments": "lala",
-      "id": 7
+      "capacity": "3",
+      "address": "1907 Eastland Ave.",
+      "establishmentName": "Rosepepper",
+      "establishmentTypeId": "1",
+      "comments": "near side patio",
+      "imageUrl": null,
+      "longitude": -86.8030241763513,
+      "latitude": 36.1789187049862,
+      "id": 4
     }
   ],
   "establishmentTypes": [
