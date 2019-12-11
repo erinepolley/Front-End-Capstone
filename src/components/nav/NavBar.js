@@ -16,7 +16,7 @@ handleLogout () {
             <>
             <header>
                 <div className="top-header">
-                <img src={require('./BikeIcon.svg')} alt="My Dog" />
+                <img src={require('../BikeIcon.svg')} alt="Bike Stash icon" />
 
                 
                <h1 className="nav-title">Bike Stash

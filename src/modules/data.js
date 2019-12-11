@@ -10,5 +10,16 @@ export default {
         // console.log("HELLOOOO???")
         return fetch(`${remoteUrl}/users?email=${email}&password=${password}`)
             .then(response => response.json())
+    },
+
+    postRack(rackObj) {
+        return fetch(`${remoteUrl}/racks`,
+        {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(rackObj)
+          }).then(data => data.json())
     }
 }
