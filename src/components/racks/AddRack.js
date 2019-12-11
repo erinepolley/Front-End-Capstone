@@ -27,7 +27,11 @@ export default class AddRack extends Component {
             address: this.state.address,
             establishmentName: this.state.establishmentName,
             establishmentTypeId: this.state.establishmentTypeId,
-            comments: this.state.comments
+            comments: this.state.comments,
+            imageUrl: null,
+            longitude: null,
+            latitude: null
+
         }
         // console.log("USERID IN POST", rack.userId)
         Data.postRack(rack)
