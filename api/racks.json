@@ -57,24 +57,6 @@
       "establishmentName": "Elizabeth Park",
       "establishmentTypeId": 3,
       "comments": "Beside the basketball courts."
-    },
-    {
-      "userId": "4",
-      "capacity": "6",
-      "address": "1907 Eastland Ave",
-      "establishmentName": "",
-      "establishmentTypeId": "",
-      "comments": "near side",
-      "id": 4
-    },
-    {
-      "userId": 4,
-      "capacity": "lala",
-      "address": "lala",
-      "establishmentName": "lala",
-      "establishmentTypeId": "lala",
-      "comments": "lala",
-      "id": 7
     }
   ],
   "establishmentTypes": [
