@@ -57,6 +57,18 @@
       "establishmentName": "Elizabeth Park",
       "establishmentTypeId": 3,
       "comments": "Beside the basketball courts."
+    },
+    {
+      "userId": 4,
+      "capacity": "3",
+      "address": "1907 Eastland Ave.",
+      "establishmentName": "Rosepepper",
+      "establishmentTypeId": "1",
+      "comments": "near side patio",
+      "imageUrl": null,
+      "longitude": -86.8030241763513,
+      "latitude": 36.1789187049862,
+      "id": 4
     }
   ],
   "establishmentTypes": [
