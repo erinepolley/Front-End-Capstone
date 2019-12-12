@@ -58,7 +58,7 @@ render(){
                         id="address" placeholder="1907 Eastland Ave"/>
                 <br></br>
 
-                <label htmlFor="type">Type of Establishment:</label>
+                <label htmlFor="establishmentTypeId">Type of Establishment:</label>
                 <br></br>
                         <input type="text" required onChange={this.handleFieldChange}
                         id="establishmentTypeId" placeholder="ex. restaurant"/>

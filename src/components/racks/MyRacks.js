@@ -1,27 +1,27 @@
 import React, { Component } from 'react'
 import Data from '../../modules/Data'
 import RackCard from './RackCard'
-const userIdFromStorage = parseInt(localStorage.getItem("credentials"))
-console.log(userIdFromStorage)
 
 export default class MyRacks extends Component {
     state = {
         racks: []
     }
-
+    
     componentDidMount() {
-        Data.getMyRacks(userIdFromStorage)
-            .then(racksArray => {
-                this.setState({
-                    racks: racksArray
-                })
+        Data.getMyRacks(parseInt(localStorage.getItem("credentials")))
+        .then(racksArray => {
+            this.setState({
+                racks: racksArray
             })
+        })
     }
-
+    
     deleteThisRack = rackId => {
+        // const userIdFromStorage = parseInt(localStorage.getItem("credentials"))
+        // console.log("USER ID ON MY RACKS", userIdFromStorage)
         Data.deleteRack(rackId)
             .then(() => {
-                Data.getMyRacks(userIdFromStorage)
+                Data.getMyRacks(parseInt(localStorage.getItem("credentials")))
                     .then(newRacks => {
                         this.setState({
                             racks: newRacks

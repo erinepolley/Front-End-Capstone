@@ -11,7 +11,7 @@ export default class ApplicationViews extends Component {
     render() {
         return (
             <>
-<Route path="/login" render={(props) => {
+<Route exact path="/login" render={(props) => {
      return <Login setUser={this.props.setUser} {...props} {...this.props} />
  }} />
 
@@ -44,7 +44,7 @@ export default class ApplicationViews extends Component {
     }
  }} />
 
-<Route path="/edit" render={(props) => {
+<Route path="/edit/:rackId(\d+)" render={(props) => {
       if (this.props.user) {
         return <EditRack {...props} {...this.props}/> 
       } else {
