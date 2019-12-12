@@ -9,6 +9,7 @@ export default class AddRack extends Component {
         establishmentName: "",
         establishmentTypeId: "",
         comments: "",
+        establishmentTypes: [],
         loadingStatus: false
     }
 
@@ -23,7 +24,7 @@ export default class AddRack extends Component {
         this.setState({ loadingStatus: true })
         const rack = {
             userId: parseInt(localStorage.getItem("credentials")),
-            capacity: this.state.capacity,
+            capacity: parseInt(this.state.capacity),
             address: this.state.address,
             establishmentName: this.state.establishmentName,
             establishmentTypeId: this.state.establishmentTypeId,
@@ -35,8 +36,13 @@ export default class AddRack extends Component {
         }
         // console.log("USERID IN POST", rack.userId)
         Data.postRack(rack)
-        .then(() => this.props.history.push("/"))
+        .then(() => this.props.history.push("/myracks"))
     }
+
+componentDidMount() {
+    Data.getEstablishmentTypes()
+    .then(types => this.setState({establishmentTypes:types}))
+}
 
 
 render(){
@@ -58,10 +64,19 @@ render(){
                         id="address" placeholder="1907 Eastland Ave"/>
                 <br></br>
 
-                <label htmlFor="establishmentTypeId">Type of Establishment:</label>
-                <br></br>
-                        <input type="text" required onChange={this.handleFieldChange}
-                        id="establishmentTypeId" placeholder="ex. restaurant"/>
+                <select
+                required
+                className="form-field"
+                onChange={this.handleFieldChange}
+                id="establishmentTypeId"
+                value={this.state.establishmentTypeId}
+              >
+              {this.state.establishmentTypes.map(establishmentType =>
+                <option key={establishmentType.id} value={establishmentType.id}>
+                {establishmentType.establishmentType}
+                </option>
+                )}
+                </select>
                 <br></br>
 
                 <label htmlFor="capacity">Capacity:</label>

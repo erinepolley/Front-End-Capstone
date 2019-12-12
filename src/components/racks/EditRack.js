@@ -11,7 +11,9 @@ export default class RackEditForm extends Component {
         address: "",
         establishmentName: "",
         establishmentType: "",
+        establishmentTypeId: "",
         comments: "",
+        establishmentTypes: [],
         loadingStatus: false
     }
 
@@ -27,10 +29,10 @@ export default class RackEditForm extends Component {
         const editedRack = {
             id: this.props.match.params.rackId,
             userId: userId,
-            capacity: this.state.capacity,
+            capacity: parseInt(this.state.capacity),
             address: this.state.address,
             establishmentName: this.state.establishmentName,
-            establishmentTypeId: this.state.establishmentType,
+            establishmentTypeId: parseInt(this.state.establishmentTypeId),
             comments: this.state.comments,
             imageUrl: null,
             longitude: null,
@@ -51,12 +53,14 @@ export default class RackEditForm extends Component {
                 address: rack.address,
                 establishmentName: rack.establishmentName,
                 establishmentType: rack.establishmentType.establishmentType,
+                establishmentTypeId: rack.establishmentTypeId,
                 comments: rack.comments,
                 loadingStatus: false
             })
-
             console.log("RACK EST TYPE", rack.establishmentType.establishmentType)
         })
+        Data.getEstablishmentTypes()
+        .then(types => this.setState({establishmentTypes:types}))
     }
 
     render() {
@@ -67,6 +71,7 @@ export default class RackEditForm extends Component {
             <div className="formgrid">
 
             <label htmlFor="establishmentName">Name of Establishment:</label>
+            <br></br>
             <input
                 type="text"
                 required
@@ -89,14 +94,19 @@ export default class RackEditForm extends Component {
         <br></br>
             <label htmlFor="establishmentTypeId">Type of Establishment:</label>
         <br></br>    
-            <input
-                type="text"
+            <select
                 required
                 className="form-field"
                 onChange={this.handleFieldChange}
                 id="establishmentTypeId"
-                value={this.state.establishmentType}
-              />
+                value={this.state.establishmentTypeId}
+              >
+              {this.state.establishmentTypes.map(establishmentType =>
+                <option key={establishmentType.id} value={establishmentType.id}>
+                {establishmentType.establishmentType}
+                </option>
+                )}
+                </select>
         <br></br>
             <label htmlFor="capacity">Capacity:</label>
         <br></br>    

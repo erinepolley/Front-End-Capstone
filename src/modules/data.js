@@ -54,6 +54,11 @@ export default {
             method: "DELETE"
         })
         .then(response => response.json())
+    },
+
+    getEstablishmentTypes() {
+        return fetch(`${remoteUrl}/establishmentTypes`)
+        .then(data => data.json())
     }
 
 }
