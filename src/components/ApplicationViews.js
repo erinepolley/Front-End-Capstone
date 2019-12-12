@@ -11,7 +11,7 @@ export default class ApplicationViews extends Component {
     render() {
         return (
             <>
-                <Route exact path="/login" render={(props) => {
+                <Route path="/login" render={(props) => {
                     const storageId = localStorage.getItem("credentials")
                     console.log(storageId)
                     if (storageId) {
@@ -34,6 +34,10 @@ export default class ApplicationViews extends Component {
                     } else {
                         return <Redirect to="login" />
                     }
+                }} />
+
+                <Route path="/home" render={(props) => {
+                    return <Map {...props} {...this.props} />
                 }} />
 
                 <Route path="/myracks" render={(props) => {

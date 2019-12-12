@@ -19,6 +19,31 @@
       "id": 4,
       "email": "erinepolley@gmail.com",
       "password": "hi"
+    },
+    {
+      "email": "brad.polley@gmail.com",
+      "password": "so",
+      "id": 5
+    },
+    {
+      "email": "atnss@nss.com",
+      "password": "hi",
+      "id": 6
+    },
+    {
+      "email": "hoo@gmail.com",
+      "password": "hi",
+      "id": 7
+    },
+    {
+      "email": "hi@hi.com",
+      "password": "ho",
+      "id": 8
+    },
+    {
+      "email": "eegriff@email.unc.edu",
+      "password": "ho",
+      "id": 9
     }
   ],
   "racks": [
@@ -45,30 +70,6 @@
       "establishmentName": "ML Rose",
       "establishmentTypeId": 1,
       "comments": "On the left if you're looking at the building. Wooden posts."
-    },
-    {
-      "id": 3,
-      "userId": 4,
-      "capacity": 4,
-      "address": "1736 Arthur Ave",
-      "establishmentName": "Elizabeth Park",
-      "establishmentTypeId": 3,
-      "comments": "Beside the basketball courts.",
-      "imageUrl": null,
-      "longitude": null,
-      "latitude": null
-    },
-    {
-      "id": 4,
-      "userId": 4,
-      "capacity": 5,
-      "address": "LLALA",
-      "establishmentName": "LLA",
-      "establishmentTypeId": 4,
-      "comments": "LALA",
-      "imageUrl": null,
-      "longitude": null,
-      "latitude": null
     }
   ],
   "establishmentTypes": [
