@@ -40,6 +40,8 @@ export default class App extends Component {
     render() {
       return (
         <React.Fragment>
+         {this.isAuthenticated() ? 
+         <>
           <NavBar           {...this.props}
           // {...props}
                             user={this.state.user}
@@ -47,7 +49,11 @@ export default class App extends Component {
                             handleLogin={this.handleLogin}/>
           <ApplicationViews user={this.state.user}
                             setUser={this.setUser} 
-                            handleLogin={this.handleLogin}/>
+                            handleLogin={this.handleLogin}/> </> :
+          <>
+          <ApplicationViews user={this.state.user}
+          setUser={this.setUser} 
+          handleLogin={this.handleLogin}/> </>}
         </React.Fragment>
       );
     }
