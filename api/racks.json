@@ -48,27 +48,27 @@
     },
     {
       "id": 3,
-      "userId": 3,
-      "imageUrl": null,
+      "userId": 4,
       "capacity": 4,
       "address": "1736 Arthur Ave",
-      "longitude": -86.8030241763513,
-      "latitude": 36.1789187049862,
       "establishmentName": "Elizabeth Park",
       "establishmentTypeId": 3,
-      "comments": "Beside the basketball courts."
+      "comments": "Beside the basketball courts.",
+      "imageUrl": null,
+      "longitude": null,
+      "latitude": null
     },
     {
+      "id": 4,
       "userId": 4,
-      "capacity": "3",
-      "address": "1907 Eastland Ave.",
-      "establishmentName": "Rosepepper",
-      "establishmentTypeId": "1",
-      "comments": "near side patio",
+      "capacity": 5,
+      "address": "LLALA",
+      "establishmentName": "LLA",
+      "establishmentTypeId": 4,
+      "comments": "LALA",
       "imageUrl": null,
-      "longitude": -86.8030241763513,
-      "latitude": 36.1789187049862,
-      "id": 4
+      "longitude": null,
+      "latitude": null
     }
   ],
   "establishmentTypes": [

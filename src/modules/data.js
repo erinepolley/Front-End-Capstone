@@ -12,6 +12,11 @@ export default {
         return fetch(`${remoteUrl}/racks?userId=${userId}&&_expand=establishmentType`)
         .then(data => data.json())
     },
+    //To edit this rack. Info in edit form
+    getRackToEdit(rackId) {
+        return fetch(`${remoteUrl}/racks/${rackId}/?_expand=establishmentType`)
+        .then(result => result.json())
+    },
 
     //checks to see if user has an account
     checkUser(email, password) {
@@ -30,12 +35,30 @@ export default {
             body: JSON.stringify(rackObj)
           }).then(data => data.json())
     },
+
+    updateRack(editedRack) {
+        return fetch(`${remoteUrl}/racks/${editedRack.id}`,
+        {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(editedRack)
+          }).then(data => console.log(data))
+            // data.json());
+    }, 
+
     deleteRack(rackId) {
         return fetch(`${remoteUrl}/racks/${rackId}`,
         {
             method: "DELETE"
         })
         .then(response => response.json())
+    },
+
+    getEstablishmentTypes() {
+        return fetch(`${remoteUrl}/establishmentTypes`)
+        .then(data => data.json())
     }
 
 }
