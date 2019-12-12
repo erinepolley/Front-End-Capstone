@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Link } from "react-router-dom"
 import Data from '../../modules/Data'
 export default class Login extends Component {
     state = {
@@ -59,7 +60,7 @@ handleFieldChange = (event) => {
                 <button type="submit">
                     Sign in
                 </button>
-                <p>New to Bike Stash? Sign up here.</p>
+               <Link to="/signup"> <p>New to Bike Stash? Sign up here.</p></Link>
             </fieldset>
           </form>
           </>
