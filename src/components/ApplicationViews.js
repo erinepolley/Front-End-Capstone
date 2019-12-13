@@ -14,6 +14,7 @@ export default class ApplicationViews extends Component {
                 <Route path="/login" render={(props) => {
                     // const storageId = localStorage.getItem("credentials")
                     // console.log(storageId)
+                    if(this.props.setUser)
                     // if (this.props.userLoggedIn()) {
                     //     return <Redirect to="/" />
                     // } else {
@@ -29,7 +30,7 @@ export default class ApplicationViews extends Component {
                 <Route exact path="/" render={(props) => {
                     // const storageId = localStorage.getItem("credentials")
                     // console.log(storageId)
-                    if (this.props.user) {
+                    if (this.props.user===true) {
                         return <Map {...props} {...this.props} />
                     } else {
                         return <Redirect to="login" />
@@ -41,7 +42,7 @@ export default class ApplicationViews extends Component {
                 }} />
 
                 <Route path="/myracks" render={(props) => {
-                    if (this.props.user) {
+                    if (this.props.user===true) {
                         return <MyRacks {...props} {...this.props} />
                     } else {
                         return <Redirect to="login" />
@@ -49,7 +50,7 @@ export default class ApplicationViews extends Component {
                 }} />
 
                 <Route path="/add" render={(props) => {
-                    if (this.props.user) {
+                    if (this.props.user===true) {
                         return <AddRack {...props} {...this.props} />
                     } else {
                         return <Redirect to="login" />
@@ -57,7 +58,7 @@ export default class ApplicationViews extends Component {
                 }} />
 
                 <Route exact path="/edit/:rackId(\d+)" render={(props) => {
-                    if (this.props.user) {
+                    if (this.props.user===true) {
                         return <EditRack {...props} {...this.props} />
                     } else {
                         return <Redirect to="login" />
