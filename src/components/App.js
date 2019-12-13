@@ -24,6 +24,8 @@ export default class App extends Component {
       });
     }
   
+
+
     clearUser = () =>  {
       localStorage.removeItem("credentials")
       this.setState({
@@ -38,6 +40,7 @@ export default class App extends Component {
     }
   
     render() {
+      console.log("APP RENDER IS AUTHENTICATED??", this.isAuthenticated())
       return (
         <React.Fragment>
          {this.isAuthenticated() ? 
@@ -46,10 +49,13 @@ export default class App extends Component {
           // {...props}
                             user={this.state.user}
                             setUser={this.setUser} 
-                            handleLogin={this.handleLogin}/>
+                            handleLogin={this.handleLogin}
+                            clearUser={this.clearUser}/>
           <ApplicationViews user={this.state.user}
                             setUser={this.setUser} 
-                            handleLogin={this.handleLogin}/> </> :
+                            handleLogin={this.handleLogin}
+                            isAuthenticated={this.isAuthenticated} /> 
+          </> :
           <>
           <ApplicationViews user={this.state.user}
           setUser={this.setUser} 

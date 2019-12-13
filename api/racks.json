@@ -61,7 +61,7 @@
     },
     {
       "id": 2,
-      "userId": 2,
+      "userId": 4,
       "image": null,
       "capacity": 4,
       "address": "4408 Charlotte Pike",
@@ -70,6 +70,30 @@
       "establishmentName": "ML Rose",
       "establishmentTypeId": 1,
       "comments": "On the left if you're looking at the building. Wooden posts."
+    },
+    {
+      "userId": 4,
+      "capacity": null,
+      "address": "LALA",
+      "establishmentName": "ROSEPEPPER",
+      "establishmentTypeId": 3,
+      "comments": "LALA",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike Stash/reabgq9dezy2udrzg3if",
+      "longitude": -86.8406162,
+      "latitude": 36.1521963,
+      "id": 3
+    },
+    {
+      "userId": 4,
+      "capacity": 5,
+      "address": "HEYYY",
+      "establishmentName": "HEYYY",
+      "establishmentTypeId": 1,
+      "comments": "near side",
+      "imageUrl": "",
+      "longitude": -86.8406162,
+      "latitude": 36.1521963,
+      "id": 4
     }
   ],
   "establishmentTypes": [
@@ -91,7 +115,7 @@
     },
     {
       "id": 5,
-      "type": "other"
+      "establishmentType": "Other"
     }
   ]
 }
