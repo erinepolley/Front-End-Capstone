@@ -50,6 +50,7 @@ export default class Signup extends Component {
             <>
                 <form onSubmit={this.handleSignup}>
                     <fieldset>
+                    <img src={require('../BikeIcon.svg')} alt="Bike Stash icon" />
                         <h1>Bike Stash</h1>
                         <h2>Welcome!</h2>
                         <h3>Sign up here.</h3>

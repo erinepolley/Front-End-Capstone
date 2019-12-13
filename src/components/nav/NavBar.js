@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom"
+import { Link, withRouter } from "react-router-dom"
 import './NavBar.css'
 
-export default class NavBar extends Component {
+class NavBar extends Component {
 
-handleLogout () {
-    localStorage.removeItem("credentials")
-    // this.props.history.push("/login")
+
    
 
-}
+
 
     render() {
         return (
@@ -28,10 +26,10 @@ handleLogout () {
                  <li><Link className="nav-link" to="/myracks">My Racks</Link></li>
                  <li><Link className="nav-link" to="/add">Add Rack</Link></li>
                  <Link className="nav-link" to="/login">
-                 <li onClick={this.handleLogout}>
-                         Log Out
+                 <li>
+                        <span onClick={this.props.clearUser}> Log Out </span>
                      </li>
-                     </Link>
+                 </Link>
             </ul>       
             </nav> 
             </header>
@@ -39,3 +37,5 @@ handleLogout () {
         )
     }
 }
+
+export default withRouter(NavBar)

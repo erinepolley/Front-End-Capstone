@@ -12,13 +12,13 @@ export default class ApplicationViews extends Component {
         return (
             <>
                 <Route path="/login" render={(props) => {
-                    const storageId = localStorage.getItem("credentials")
-                    console.log(storageId)
-                    if (storageId) {
-                        return <Redirect to="/" />
-                    } else {
+                    // const storageId = localStorage.getItem("credentials")
+                    // console.log(storageId)
+                    // if (this.props.userLoggedIn()) {
+                    //     return <Redirect to="/" />
+                    // } else {
                         return <Login setUser={this.props.setUser} {...props} {...this.props} />
-                    }
+                    // }
                 }} />
 
                 <Route path="/signup" render={(props) => {
@@ -27,9 +27,9 @@ export default class ApplicationViews extends Component {
 
 
                 <Route exact path="/" render={(props) => {
-                    const storageId = localStorage.getItem("credentials")
-                    console.log(storageId)
-                    if (storageId) {
+                    // const storageId = localStorage.getItem("credentials")
+                    // console.log(storageId)
+                    if (this.props.user) {
                         return <Map {...props} {...this.props} />
                     } else {
                         return <Redirect to="login" />
@@ -64,9 +64,9 @@ export default class ApplicationViews extends Component {
                     }
                 }} />
 
-                <Route path="/logout" render={(props) => {
-                    return <Login />
-                }} />
+                {/* <Route path="/logout" render={(props) => {
+                    return <Login /> */}
+                {/* }} /> */}
             </>
         )
     }
