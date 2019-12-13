@@ -95,7 +95,7 @@ export default class AddRack extends Component {
                             <label htmlFor="capacity">Capacity:</label>
                             <br></br>
                             <input type="text" required onChange={this.handleFieldChange}
-                                id="capacity" placeholder="6" />
+                                id="capacity" placeholder="ex. 6" />
                             <br></br>
 
                             <label htmlFor="comments">Comments:</label>
