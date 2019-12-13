@@ -74,15 +74,17 @@ export default class AddRack extends Component {
                             <input type="text" required onChange={this.handleFieldChange}
                                 id="address" placeholder="1907 Eastland Ave" />
                             <br></br>
-
+                            <label htmlFor="establishmentTypeId">Establishment Type:</label>
+                            <br></br>
                             <select
                                 required
                                 className="form-field"
                                 onChange={this.handleFieldChange}
                                 id="establishmentTypeId"
                                 value={this.state.establishmentTypeId}
-                            >
+                            >   <option key="" value="">Select One</option>
                                 {this.state.establishmentTypes.map(establishmentType =>
+                                // {console.log(establishmentType.id)},
                                     <option key={establishmentType.id} value={establishmentType.id}>
                                         {establishmentType.establishmentType}
                                     </option>

@@ -14,12 +14,12 @@ export default class ApplicationViews extends Component {
                 <Route path="/login" render={(props) => {
                     // const storageId = localStorage.getItem("credentials")
                     // console.log(storageId)
-                    if(this.props.setUser)
+                    if(this.props.user===true) {
                     // if (this.props.userLoggedIn()) {
-                    //     return <Redirect to="/" />
-                    // } else {
+                        return <Redirect to="/" />
+                    } else {
                         return <Login setUser={this.props.setUser} {...props} {...this.props} />
-                    // }
+                    }
                 }} />
 
                 <Route path="/signup" render={(props) => {
