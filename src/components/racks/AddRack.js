@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Data from '../../modules/Data'
-
+import Exif from "../pictures/Exif"
+import Gps from "../pictures/Gps"
 export default class AddRack extends Component {
     state = {
         userId: "",
@@ -11,7 +12,8 @@ export default class AddRack extends Component {
         comments: "",
         imageUrl: "",
         establishmentTypes: [],
-        loadingStatus: false
+        loadingStatus: false,
+        photoData: null
     }
 
     handleFieldChange = event => {
@@ -32,12 +34,19 @@ export default class AddRack extends Component {
             comments: this.state.comments,
             imageUrl: this.state.imageUrl,
             longitude: null,
-            latitude: null
-
+            latitude: null,
+            photoData: null
+            
         }
         // console.log("USERID IN POST", rack.userId)
         Data.postRack(rack)
-            .then(() => this.props.history.push("/myracks"))
+        .then(() => this.props.history.push("/myracks"))
+    }
+    
+    uploadChangedHandler = event => {
+        this.setState({
+            photoData: Exif.getExifData(event.target.files[0])
+        }) 
     }
 
     uploadWidget = () => {
@@ -63,7 +72,7 @@ export default class AddRack extends Component {
                     <fieldset>
                         <div className="formgrid">
 
-                            <label htmlFor="animalName">Name of Establishment:</label>
+                            <label htmlFor="establishmentName">Name of Establishment:</label>
                             <br></br>
                             <input type="text" required onChange={this.handleFieldChange}
                                 id="establishmentName" placeholder="Rosepepper" />
@@ -105,7 +114,7 @@ export default class AddRack extends Component {
                             <br></br>
                         </div>
                         <img className="uploaded-image" src={this.state.imageUrl} alt="" />
-                        <button onClick={this.uploadWidget.bind(this)} className="button">
+                        <button onClick={this.uploadWidget.bind(this)}onClick={this.uploadChangedHandler} className="button">
                             Upload Photo
                         </button>
                         <button type="button" disabled={this.state.loadingStatus}

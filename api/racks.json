@@ -57,9 +57,11 @@
       "latitude": 36.0968686,
       "establishmentName": "Publix",
       "establishmentTypeId": 4,
-      "comments": "If you're facing the entrance, they're on the left."
+      "comments": "If you're facing the entrance, they're on the left.",
+      "photoData": null
     },
     {
+      "photoData": null,
       "id": 2,
       "userId": 4,
       "image": null,
@@ -72,6 +74,7 @@
       "comments": "On the left if you're looking at the building. Wooden posts."
     },
     {
+      "photoData": null,
       "userId": 4,
       "capacity": null,
       "address": "LALA",
