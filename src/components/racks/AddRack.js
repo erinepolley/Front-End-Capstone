@@ -68,7 +68,7 @@ export default class AddRack extends Component {
     render() {
         return (
             <>
-                <form>
+                <form onSubmit={this.uploadHandler}>
                     <fieldset>
                         <div className="formgrid">
 
@@ -113,8 +113,10 @@ export default class AddRack extends Component {
                                 id="comments" placeholder="near side patio" />
                             <br></br>
                         </div>
-                        <img className="uploaded-image" src={this.state.imageUrl} alt="" />
-                        <button onClick={this.uploadWidget.bind(this)}onClick={this.uploadChangedHandler} className="button">
+                        <img className="uploaded-image" type="file" src={this.state.imageUrl} alt="" />
+                        <button 
+                        onClick={this.uploadWidget.bind(this)}
+                        onClick={this.uploadChangedHandler} className="button">
                             Upload Photo
                         </button>
                         <button type="button" disabled={this.state.loadingStatus}

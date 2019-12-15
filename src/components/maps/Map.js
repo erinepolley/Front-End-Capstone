@@ -10,7 +10,8 @@ const dummyDataPath = [
   [36.12957358256369, -86.75461292266846]
 ];
 
-const customIcon = L.icon({
+
+let customIcon= L.icon({
   iconUrl: 'custommarker.png',
   shadowUrl: 'marker-shadow.png',
 
@@ -20,10 +21,9 @@ const customIcon = L.icon({
   // shadowAnchor: [4, 62],  // the same for the shadow
   // popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 })
-
 export default class Map extends Component {
   map = null;
-
+  
   componentDidMount() {
     // create map
     this.map = L.map('map').setView([36.161716102, -86.7780876], 13);
@@ -48,6 +48,7 @@ export default class Map extends Component {
         // const longitude = rack.longitude
         console.log("RACK ON MAPS PAGE FROM GET ALL RACKS", rack)
         //take each rack and add the information to a popup
+        //, {icon: customIcon} for custom icon
         L.marker([rack.latitude, rack.longitude])
           .bindPopup(
             `Name: ${rack.establishmentName}<br>
