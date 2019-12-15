@@ -51,7 +51,8 @@ export default class Map extends Component {
         //, {icon: customIcon} for custom icon
         L.marker([rack.latitude, rack.longitude])
           .bindPopup(
-            `Name: ${rack.establishmentName}<br>
+            `${rack.imageUrl}
+            Name: ${rack.establishmentName}<br>
             Type: ${rack.establishmentType.establishmentType}<br>
             Address: ${rack.address} <br>
             Capacity: ${rack.capacity} <br>
