@@ -51,12 +51,12 @@ export default class Map extends Component {
         //, {icon: customIcon} for custom icon
         L.marker([rack.latitude, rack.longitude])
           .bindPopup(
-            `${rack.imageUrl}
-            Name: ${rack.establishmentName}<br>
-            Type: ${rack.establishmentType.establishmentType}<br>
-            Address: ${rack.address} <br>
-            Capacity: ${rack.capacity} <br>
-            Comments: ${rack.comments}
+            `<img src= "${rack.imageUrl}" width=60%/> <br>
+            <strong>Name:</strong> ${rack.establishmentName}<br>
+            <strong>Type:</strong> ${rack.establishmentType.establishmentType}<br>
+            <strong>Address:</strong> ${rack.address} <br>
+            <strong>Capacity:</strong> ${rack.capacity} <br>
+            <strong>Comments:</strong> ${rack.comments}
   `
           )
           .addTo(this.map)
