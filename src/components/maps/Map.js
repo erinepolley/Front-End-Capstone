@@ -68,7 +68,7 @@ export default class Map extends Component {
     //     .addTo(this.map);
 
     //Gets data from the external Nashville.gov API with all city-provided racks
-    GovData.getGovApiData()
+    ExternalApi.getGovApiData()
       .then(govRacks => govRacks.forEach(govRack => {
         // console.log(govRack)
         L.marker([govRack.the_geom.coordinates[1], govRack.the_geom.coordinates[0]])
