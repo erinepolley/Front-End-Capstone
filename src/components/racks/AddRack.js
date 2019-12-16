@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Data from '../../modules/Data'
+import ExternalApi from '../../modules/ExternalApi'
 
 export default class AddRack extends Component {
     state = {
@@ -11,6 +12,8 @@ export default class AddRack extends Component {
         comments: "",
         imageUrl: "",
         establishmentTypes: [],
+        longitude: "",
+        latitude: "",
         loadingStatus: false
     }
 
@@ -34,8 +37,8 @@ export default class AddRack extends Component {
             establishmentTypeId: parseInt(this.state.establishmentTypeId),
             comments: this.state.comments,
             imageUrl: this.state.imageUrl,
-            longitude: null,
-            latitude: null
+            longitude: this.state.longitude,
+            latitude: this.state.latitude
 
         }
         // console.log("USERID IN POST", rack.userId)
@@ -53,11 +56,20 @@ export default class AddRack extends Component {
             this.setState({imageUrl: `https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/${result[0].public_id}`})
     })
 }
+//TODO: get the value of the input field for address
+//TODO: use getLocationIQData to return an object with said value with function below
+//TODO: target longitude and latitude in object, and use it to set long and lat state
+//TODO: 
+    sendLatLongToMap () {
+        ExternalApi.getLocationIQData(this.state.address)
+    }
 
     componentDidMount() {
         Data.getEstablishmentTypes()
             .then(types => this.setState({ establishmentTypes: types }))
     }
+
+
 
 
     render() {
