@@ -172,9 +172,9 @@ export default class AddRack extends Component {
                             </div>
                             <img className="uploaded-image" type="file" src={this.state.imageUrl} alt="" />
                             {/* Alex's code  */}
-                            <form 
-                            // onSubmit={this.uploadHandler}
-                            >
+                        
+                            {/* // onSubmit={this.uploadHandler} */}
+                            
                                 <formgroup>
                                     <h3>Upload issue photo</h3>
                                 </formgroup>
@@ -196,7 +196,7 @@ export default class AddRack extends Component {
                                 <formgroup>
                                     <button type="submit">Upload</button>
                                 </formgroup>
-                            </form>
+                            
 
                             <button onClick={this.uploadChangedHandler} className="button">
                                 Upload Photo

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import L from 'leaflet';
 import API from '../../modules/Data'
-import GovData from '../../modules/GovData'
+import ExternalApi from '../../modules/ExternalApi'
 
 const dummyDataPath = [
   [36.134842046153565, -86.75954818725587],
@@ -68,7 +68,7 @@ export default class Map extends Component {
     //     .addTo(this.map);
 
     //Gets data from the external Nashville.gov API with all city-provided racks
-    GovData.getData()
+    GovData.getGovApiData()
       .then(govRacks => govRacks.forEach(govRack => {
         // console.log(govRack)
         L.marker([govRack.the_geom.coordinates[1], govRack.the_geom.coordinates[0]])
