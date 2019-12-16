@@ -48,21 +48,9 @@
   ],
   "racks": [
     {
-      "id": 1,
-      "userId": 1,
-      "image": null,
-      "capacity": 6,
-      "address": "4324 Harding Pike",
-      "longitude": -86.8766429,
-      "latitude": 36.0968686,
-      "establishmentName": "Publix",
-      "establishmentTypeId": 4,
-      "comments": "If you're facing the entrance, they're on the left."
-    },
-    {
       "id": 2,
       "userId": 4,
-      "image": null,
+      "imageUrl": null,
       "capacity": 4,
       "address": "4408 Charlotte Pike",
       "longitude": -86.8406162,
@@ -72,29 +60,126 @@
       "comments": "On the left if you're looking at the building. Wooden posts."
     },
     {
+      "id": 4,
       "userId": 4,
-      "capacity": null,
-      "address": "LALA",
-      "establishmentName": "ROSEPEPPER",
-      "establishmentTypeId": 3,
-      "comments": "LALA",
-      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike Stash/reabgq9dezy2udrzg3if",
-      "longitude": -86.8406162,
-      "latitude": 36.1521963,
-      "id": 3
+      "capacity": 6,
+      "address": "320 E Trinity Ln, Nashville, TN 37207",
+      "establishmentName": "East Nashville Beer Works",
+      "establishmentTypeId": 1,
+      "comments": "In the front of the bar",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/b9ro6gfbl51aq22szw7s",
+      "longitude": -86.7632038301232,
+      "latitude": 36.20526205
     },
     {
       "userId": 4,
-      "capacity": 5,
-      "address": "HEYYY",
-      "establishmentName": "HEYYY",
+      "capacity": 4,
+      "address": "4324 Harding Pike",
+      "establishmentName": "Publix",
+      "establishmentTypeId": 4,
+      "comments": "on the left side if you're facing building",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/jqh79riu8hz30um9vv4c",
+      "longitude": -86.8548227,
+      "latitude": 36.1196949,
+      "id": 5
+    },
+    {
+      "id": 6,
+      "userId": 4,
+      "capacity": 4,
+      "address": "4408 Charlotte Pike",
+      "establishmentName": "ML Rose",
       "establishmentTypeId": 1,
-      "comments": "near side",
+      "comments": "in the front on the left of building",
       "imageUrl": "",
-      "longitude": -86.8406162,
-      "latitude": 36.1521963,
-      "id": 4
+      "longitude": -86.908242,
+      "latitude": 36.127097
+    },
+    {
+      "userId": 4,
+      "capacity": 9,
+      "address": "101 Van Buren St, Nashville, TN 37208",
+      "establishmentName": "Bearded Iris",
+      "establishmentTypeId": 1,
+      "comments": "Hidden in the back where mural is",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/fq45ybydqzj2rotd2fcc",
+      "longitude": -86.786174,
+      "latitude": 36.181424,
+      "id": 7
+    },
+    {
+      "userId": 4,
+      "capacity": 12,
+      "address": "4210 Harding Pike, Nashville, TN 37205",
+      "establishmentName": "Aquinas College",
+      "establishmentTypeId": 2,
+      "comments": "On the very back of campus in front of library",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/dice9jzpvj7zmte8ighs",
+      "longitude": -86.8440125,
+      "latitude": 36.1320979,
+      "id": 8
+    },
+    {
+      "id": 9,
+      "userId": 4,
+      "capacity": 14,
+      "address": "2316 12th Ave S, Nashville, TN 37204",
+      "establishmentName": "Josephine",
+      "establishmentTypeId": 1,
+      "comments": "on top deck of parking garage",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/xlwgnb0jtnxhjdksexeg",
+      "longitude": -86.7890597607754,
+      "latitude": 36.1273243797296
+    },
+    {
+      "userId": 4,
+      "capacity": 12,
+      "address": "3 City Ave #200, Nashville, TN 37209",
+      "establishmentName": "Avo",
+      "establishmentTypeId": 1,
+      "comments": "Out back near volleyball courts",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/dgpxawlfdzqaxke1fluj",
+      "longitude": -86.819958,
+      "latitude": 36.152419,
+      "id": 10
+    },
+    {
+      "userId": 4,
+      "capacity": 8,
+      "address": "1812 21st Ave S, Nashville, TN 37212",
+      "establishmentName": "Fido",
+      "establishmentTypeId": 1,
+      "comments": "out front on the street",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/s1xidedbarxqnrvpyksf",
+      "longitude": -86.8007522244898,
+      "latitude": 36.1367878571429,
+      "id": 11
+    },
+    {
+      "userId": 4,
+      "capacity": 4,
+      "address": "4021 Hillsboro Pike, Nashville, TN 37215",
+      "establishmentName": "Whole Foods",
+      "establishmentTypeId": 4,
+      "comments": "beside the parking garage",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/iqeamzqtwitlsws9scqg",
+      "longitude": -86.816398387347,
+      "latitude": 36.103207024386,
+      "id": 12
+    },
+    {
+      "userId": 4,
+      "capacity": 6,
+      "address": "235 5th Ave N, Nashville, TN 37219",
+      "establishmentName": "Frothy Monkey Downtown",
+      "establishmentTypeId": 1,
+      "comments": "in front of shop",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/kgsvgkvpynn8pge0exjx",
+      "longitude": -86.7808867142857,
+      "latitude": 36.1640722619048,
+      "id": 13
     }
+
   ],
   "establishmentTypes": [
     {
