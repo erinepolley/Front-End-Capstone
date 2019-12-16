@@ -11,7 +11,7 @@ export default class ApplicationViews extends Component {
     render() {
         return (
             <>
-                <Route path="/login" render={(props) => {
+                <Route exact path="/login" render={(props) => {
                     // const storageId = localStorage.getItem("credentials")
                     // console.log(storageId)
                     if(this.props.user===true) {
@@ -33,7 +33,7 @@ export default class ApplicationViews extends Component {
                     if (this.props.user===true) {
                         return <Map {...props} {...this.props} />
                     } else {
-                        return <Redirect to="login" />
+                        return <Redirect to="/login" />
                     }
                 }} />
 
@@ -45,7 +45,7 @@ export default class ApplicationViews extends Component {
                     if (this.props.user===true) {
                         return <MyRacks {...props} {...this.props} />
                     } else {
-                        return <Redirect to="login" />
+                        return <Redirect to="/login" />
                     }
                 }} />
 
@@ -53,7 +53,7 @@ export default class ApplicationViews extends Component {
                     if (this.props.user===true) {
                         return <AddRack {...props} {...this.props} />
                     } else {
-                        return <Redirect to="login" />
+                        return <Redirect to="/login" />
                     }
                 }} />
 
@@ -61,7 +61,7 @@ export default class ApplicationViews extends Component {
                     if (this.props.user===true) {
                         return <EditRack {...props} {...this.props} />
                     } else {
-                        return <Redirect to="login" />
+                        return <Redirect to="/login" />
                     }
                 }} />
 

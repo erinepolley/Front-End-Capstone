@@ -6,7 +6,8 @@ export default class RackCard extends Component {
         return(
             <>
             <div className="card">
-            {/* <picture></picture> */}
+            <img className="uploaded-image" src={this.props.rack.imageUrl} alt="" />
+            
             <h3>Rack Location: {this.props.rack.establishmentName}</h3>
             <p>Type: {this.props.rack.establishmentType.establishmentType}</p>
             <p>Address: {this.props.rack.address}</p>
