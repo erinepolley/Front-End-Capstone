@@ -54,6 +54,16 @@
       "email": "hiya@hi.com",
       "password": "lala",
       "id": 11
+    },
+    {
+      "email": "hiya@hiya.com",
+      "password": "it",
+      "id": 12
+    },
+    {
+      "email": "hello@hello.com",
+      "password": "hi",
+      "id": 13
     }
   ],
   "racks": [
@@ -296,6 +306,42 @@
       "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/tegszlku2qavaf70fvc4",
       "longitude": "-86.8331117309267",
       "latitude": "36.1441053886382"
+    },
+    {
+      "id": 23,
+      "userId": 4,
+      "capacity": 8,
+      "address": "15 Hermitage Ave, Nashville, TN 37204",
+      "establishmentName": "hithere",
+      "establishmentTypeId": 5,
+      "comments": "haha",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/hjkvtmetygtbk8lddjow",
+      "longitude": "-86.769630603536",
+      "latitude": "36.1569552577143"
+    },
+    {
+      "id": 24,
+      "userId": 4,
+      "capacity": 10,
+      "address": "1800 Eastland Ave Nashville TN",
+      "establishmentName": "WHAT",
+      "establishmentTypeId": 5,
+      "comments": "WHAT??",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/hklmupm22sn7mmqcloeh",
+      "longitude": "-86.738358",
+      "latitude": "36.182776"
+    },
+    {
+      "id": 25,
+      "userId": 12,
+      "capacity": 10,
+      "address": "1800 14th Ave N, Nashville, TN",
+      "establishmentName": "HI",
+      "establishmentTypeId": 2,
+      "comments": "HI",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/dgn0kiqg0msdbl3waxbf",
+      "longitude": "-86.807846",
+      "latitude": "36.180805"
     }
   ],
   "establishmentTypes": [

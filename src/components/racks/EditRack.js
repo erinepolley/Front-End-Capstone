@@ -64,7 +64,7 @@ export default class RackEditForm extends Component {
         .then(response => {
         const editedRack = {
             id: this.props.match.params.rackId,
-            userId: userId,
+            userId: parseInt(localStorage.getItem("credentials")),
             capacity: parseInt(this.state.capacity),
             address: this.state.address,
             establishmentName: this.state.establishmentName,

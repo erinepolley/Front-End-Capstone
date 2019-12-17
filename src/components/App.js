@@ -38,7 +38,7 @@ export default class App extends Component {
     }
   
     render() {
-      console.log("APP RENDER IS AUTHENTICATED??", this.isAuthenticated())
+      // console.log("APP RENDER IS AUTHENTICATED??", this.isAuthenticated())
       return (
         <React.Fragment>
          {this.isAuthenticated() ? 
