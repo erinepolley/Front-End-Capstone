@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Data from '../../modules/Data'
 import ExternalApi from '../../modules/ExternalApi'
+import './RackForms.css'
 
 export default class AddRack extends Component {
     state = {

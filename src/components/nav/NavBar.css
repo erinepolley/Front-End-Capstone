@@ -1,0 +1,9 @@
+.top-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.icon {
+    width: 20%;
+    padding: 10px;
+}

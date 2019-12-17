@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Data from '../../modules/Data'
-
+import '../App.css'
 
 const userId = parseInt(localStorage.getItem("credentials"))
 export default class RackEditForm extends Component {

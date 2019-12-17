@@ -50,14 +50,14 @@
     {
       "id": 2,
       "userId": 4,
-      "imageUrl": null,
       "capacity": 4,
       "address": "4408 Charlotte Pike",
-      "longitude": -86.8406162,
-      "latitude": 36.1521963,
       "establishmentName": "ML Rose",
       "establishmentTypeId": 1,
-      "comments": "On the left if you're looking at the building. Wooden posts."
+      "comments": "On the left if you're looking at the building. Wooden posts.",
+      "imageUrl": null,
+      "longitude": -86.8406162,
+      "latitude": 36.1521963
     },
     {
       "id": 4,
