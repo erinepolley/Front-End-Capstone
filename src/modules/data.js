@@ -60,7 +60,7 @@ export default {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify(editedRack)
-            }).then(data => console.log(data))
+            }).then(data => data.json())
         // data.json());
     },
 

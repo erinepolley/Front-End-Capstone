@@ -13,13 +13,11 @@ class NavBar extends Component {
         return (
             <>
             <header>
-                <div className="top-header">
-                <img src={require('../BikeIcon.svg')} alt="Bike Stash icon" />
-
-                
+               <div className="top-header">
+               <img src={require('../BikeIcon.svg')} className="icon" alt="Bike Stash icon" />
                <h1 className="nav-title">Bike Stash
                </h1>
-               </div>
+               
                <nav>
              <ul className="nav-links">
                  <li><Link className="nav-link" to="/">Home</Link></li>
@@ -27,11 +25,12 @@ class NavBar extends Component {
                  <li><Link className="nav-link" to="/add">Add Rack</Link></li>
                  <Link className="nav-link" to="/login">
                  <li>
-                        <span onClick={this.props.clearUser}> Log Out </span>
+                        <span onClick={this.props.clearUser}>Log Out</span>
                      </li>
                  </Link>
             </ul>       
             </nav> 
+            </div>
             </header>
             </>
         )

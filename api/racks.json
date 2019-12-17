@@ -44,20 +44,40 @@
       "email": "eegriff@email.unc.edu",
       "password": "ho",
       "id": 9
+    },
+    {
+      "email": "hello@gmail.com",
+      "password": "hi",
+      "id": 10
+    },
+    {
+      "email": "hiya@hi.com",
+      "password": "lala",
+      "id": 11
+    },
+    {
+      "email": "hiya@hiya.com",
+      "password": "it",
+      "id": 12
+    },
+    {
+      "email": "hello@hello.com",
+      "password": "hi",
+      "id": 13
     }
   ],
   "racks": [
     {
       "id": 2,
       "userId": 4,
-      "imageUrl": null,
       "capacity": 4,
       "address": "4408 Charlotte Pike",
-      "longitude": -86.8406162,
-      "latitude": 36.1521963,
       "establishmentName": "ML Rose",
       "establishmentTypeId": 1,
-      "comments": "On the left if you're looking at the building. Wooden posts."
+      "comments": "On the left if you're looking at the building. Wooden posts.",
+      "imageUrl": null,
+      "longitude": -86.8406162,
+      "latitude": 36.1521963
     },
     {
       "id": 4,
@@ -178,8 +198,151 @@
       "longitude": -86.7808867142857,
       "latitude": 36.1640722619048,
       "id": 13
+    },
+    {
+      "id": 14,
+      "userId": 4,
+      "capacity": 6,
+      "address": "1907 Eastland Ave. Nashville, TN",
+      "establishmentName": "lala",
+      "establishmentTypeId": 1,
+      "comments": "la",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/hciapyepn39ywcbh7azc",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "userId": 4,
+      "capacity": 6,
+      "address": "1907 Eastland Ave. Nashville, TN",
+      "establishmentName": "Rosepepper",
+      "establishmentTypeId": 1,
+      "comments": "near sie",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/xdzwxs2xes2yaj1dzudj",
+      "longitude": "",
+      "latitude": "",
+      "id": 15
+    },
+    {
+      "userId": 4,
+      "capacity": 8,
+      "address": "1907 Eastland Ave. Nashville, TN",
+      "establishmentName": "rjla",
+      "establishmentTypeId": 2,
+      "comments": "lkrg",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/gmfb90qs3xcpammsrhue",
+      "longitude": "",
+      "latitude": "",
+      "id": 16
+    },
+    {
+      "userId": 4,
+      "capacity": 6,
+      "address": "1907 Eastland Ave. Nashville, TN",
+      "establishmentName": "ksjdf",
+      "establishmentTypeId": 1,
+      "comments": "kjfs",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/nqup4mzztpnehe61l4mx",
+      "longitude": "",
+      "latitude": "",
+      "id": 17
+    },
+    {
+      "userId": 4,
+      "capacity": 6,
+      "address": "1907 Eastland Ave. Nashville, TN",
+      "establishmentName": "fdk",
+      "establishmentTypeId": 1,
+      "comments": "skjdfh",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/i2mxdgihlefmhdtgyicm",
+      "longitude": "",
+      "latitude": "",
+      "id": 18
+    },
+    {
+      "userId": 4,
+      "capacity": 8,
+      "address": "1907 Eastland Ave. Nashville, TN",
+      "establishmentName": "Rosepepper",
+      "establishmentTypeId": 1,
+      "comments": "near side",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/k5l5nqraic3lbpkvbwbk",
+      "longitude": "-86.7348796666667",
+      "latitude": "36.1826703333333",
+      "id": 19
+    },
+    {
+      "userId": 4,
+      "capacity": 8,
+      "address": "1907 Eastland Ave. Nashville, TN",
+      "establishmentName": "lksjd",
+      "establishmentTypeId": 1,
+      "comments": "lskjf",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/n9zrpiiuh0nhqzjar9qt",
+      "longitude": "-86.7348796666667",
+      "latitude": "36.1826703333333",
+      "id": 20
+    },
+    {
+      "id": 21,
+      "userId": 11,
+      "capacity": 7,
+      "address": "2016B 14th Ave N, Nashville, TN",
+      "establishmentName": "Erin Polley",
+      "establishmentTypeId": 1,
+      "comments": "PRIVATE--GET YO BIKE OFF MY LAWN",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/fvroy6kbilkiyp4d29dr",
+      "longitude": "-86.8087842190541",
+      "latitude": "36.1841902124547"
+    },
+    {
+      "id": 22,
+      "userId": 11,
+      "capacity": 27,
+      "address": "4018A Utah Ave. Nashville, TN",
+      "establishmentName": "HEY HEY",
+      "establishmentTypeId": 3,
+      "comments": "NO",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/tegszlku2qavaf70fvc4",
+      "longitude": "-86.8331117309267",
+      "latitude": "36.1441053886382"
+    },
+    {
+      "id": 23,
+      "userId": 4,
+      "capacity": 8,
+      "address": "15 Hermitage Ave, Nashville, TN 37204",
+      "establishmentName": "hithere",
+      "establishmentTypeId": 5,
+      "comments": "haha",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/hjkvtmetygtbk8lddjow",
+      "longitude": "-86.769630603536",
+      "latitude": "36.1569552577143"
+    },
+    {
+      "id": 24,
+      "userId": 4,
+      "capacity": 10,
+      "address": "1800 Eastland Ave Nashville TN",
+      "establishmentName": "WHAT",
+      "establishmentTypeId": 5,
+      "comments": "WHAT??",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/hklmupm22sn7mmqcloeh",
+      "longitude": "-86.738358",
+      "latitude": "36.182776"
+    },
+    {
+      "id": 25,
+      "userId": 12,
+      "capacity": 10,
+      "address": "1800 14th Ave N, Nashville, TN",
+      "establishmentName": "HI",
+      "establishmentTypeId": 2,
+      "comments": "HI",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/dgn0kiqg0msdbl3waxbf",
+      "longitude": "-86.807846",
+      "latitude": "36.180805"
     }
-
   ],
   "establishmentTypes": [
     {
