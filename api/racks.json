@@ -178,8 +178,31 @@
       "longitude": -86.7808867142857,
       "latitude": 36.1640722619048,
       "id": 13
+    },
+    {
+      "userId": 4,
+      "capacity": 6,
+      "address": "1907 Eastland Ave. Nashville, TN",
+      "establishmentName": "lala",
+      "establishmentTypeId": 1,
+      "comments": "la",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/yz8verhwwjhqn4mskgl9",
+      "longitude": "",
+      "latitude": "",
+      "id": 14
+    },
+    {
+      "userId": 4,
+      "capacity": 8,
+      "address": "1907 Eastland Ave. Nashville, TN",
+      "establishmentName": "Rosepepper",
+      "establishmentTypeId": 2,
+      "comments": "la",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/s1wedawlf037fyes68p2",
+      "longitude": "",
+      "latitude": "",
+      "id": 15
     }
-
   ],
   "establishmentTypes": [
     {

@@ -15,6 +15,7 @@ getGovApiData () {
 getLocationIQData (searchString) {
     return fetch(`${locationIQUrl}&q=${searchString}&format=json`)
     .then(response => response.json())
+    // .then(response => console.log("RESPONSE FROM IQ", response))
 }
 
 

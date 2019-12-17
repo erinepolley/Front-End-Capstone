@@ -46,7 +46,7 @@ export default class Map extends Component {
       .then(racks => racks.forEach(rack => {
         // const latitude = rack.latitude
         // const longitude = rack.longitude
-        console.log("RACK ON MAPS PAGE FROM GET ALL RACKS", rack)
+        // console.log("RACK ON MAPS PAGE FROM GET ALL RACKS", rack)
         //take each rack and add the information to a popup
         L.marker([rack.latitude, rack.longitude])
           .bindPopup(
@@ -67,7 +67,7 @@ export default class Map extends Component {
     //     .addTo(this.map);
 
     //Gets data from the external Nashville.gov API with all city-provided racks
-    ExternalApi.getData()
+    ExternalApi.getGovApiData()
       .then(govRacks => govRacks.forEach(govRack => {
         // console.log(govRack)
         L.marker([govRack.the_geom.coordinates[1], govRack.the_geom.coordinates[0]])
