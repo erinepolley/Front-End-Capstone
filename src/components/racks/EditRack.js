@@ -152,6 +152,9 @@ export default class RackEditForm extends Component {
                                 value={this.state.comments}
                             />
                             <br></br>
+                            </div>
+                            </fieldset>
+                        </form>
                             
                             {this.state.imageUrl !== "" ?
                             <>
@@ -170,9 +173,6 @@ export default class RackEditForm extends Component {
                                 className="button"
                             >Update</button>
 
-                        </div>
-                    </fieldset>
-                </form>
             </React.Fragment>
         )
     }
