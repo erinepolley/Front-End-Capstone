@@ -1,10 +1,10 @@
 button {
-        border: 1px solid midnightblue;
+        border: 1px solid black;
         border-radius: 3px;
         background-color: #64deca;
         display: inline-block;
         font-size: 14px;
-        color: midnightblue;
+        color: black;
         /* margin-left: 10px; */
         margin-right: 10px;
         font-weight: 400;

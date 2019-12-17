@@ -34,8 +34,8 @@ export default class Signup extends Component {
                     }
                     Data.addNewUser(newUser)
                         .then(results => {
-                            console.log(results)
-                            localStorage.setItem("credentials", results.id)
+                            {this.props.setUser(results)}
+                            // localStorage.setItem("credentials", results.id)
                         })
                     this.props.history.push("/home")
                 //    return <Redirect to="/" />

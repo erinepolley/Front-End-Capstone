@@ -44,27 +44,25 @@ export default class AddRack extends Component {
             // this.sendLatLongToMap()
             ExternalApi.getLocationIQData(this.state.address)
             .then(response => {
-                this.setState({
+    
+                const rack = {
+                    userId: parseInt(localStorage.getItem("credentials")),
+                    capacity: parseInt(this.state.capacity),
+                    address: this.state.address,
+                    establishmentName: this.state.establishmentName,
+                    establishmentTypeId: parseInt(this.state.establishmentTypeId),
+                    comments: this.state.comments,
+                    imageUrl: this.state.imageUrl,
                     longitude: response[0].lon,
                     latitude: response[0].lat
-                })
-                console.log("LON AND LAT", this.state.longitude, this.state.latitude)
-            })
-            const rack = {
-                userId: parseInt(localStorage.getItem("credentials")),
-                capacity: parseInt(this.state.capacity),
-                address: this.state.address,
-                establishmentName: this.state.establishmentName,
-                establishmentTypeId: parseInt(this.state.establishmentTypeId),
-                comments: this.state.comments,
-                imageUrl: this.state.imageUrl,
-                longitude: this.state.longitude,
-                latitude: this.state.latitude
+    
+                }
 
-            }
-            // console.log("USERID IN POST", rack.userId)
-            Data.postRack(rack)
-                .then(() => this.props.history.push("/myracks"))
+                console.log("LON AND LAT", response[0].lon, response[0].lat)
+                return rack
+            })
+            .then(rackObj =>  Data.postRack(rackObj))
+            .then(() => this.props.history.push("/myracks"))
         }
     }
 
@@ -104,7 +102,7 @@ export default class AddRack extends Component {
                             <label htmlFor="address">Address:</label>
                             <br></br>
                             <input type="text" required onChange={this.handleFieldChange}
-                                id="address" placeholder="1907 Eastland Ave" />
+                                id="address" placeholder="1907 Eastland Ave., Nashville, TN" />
                             <br></br>
                             <label htmlFor="establishmentTypeId">Establishment Type:</label>
                             <br></br>

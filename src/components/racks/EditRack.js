@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Data from '../../modules/Data'
+import ExternalApi from '../../modules/ExternalApi'
 import '../App.css'
 
 const userId = parseInt(localStorage.getItem("credentials"))
@@ -32,9 +33,35 @@ export default class RackEditForm extends Component {
         console.log("STATE AFTER DELETE RACK IN EDIT FORM", this.state)
     }
 
+    // ExternalApi.getLocationIQData(this.state.address)
+    // .then(response => {
+
+    //     const rack = {
+    //         userId: parseInt(localStorage.getItem("credentials")),
+    //         capacity: parseInt(this.state.capacity),
+    //         address: this.state.address,
+    //         establishmentName: this.state.establishmentName,
+    //         establishmentTypeId: parseInt(this.state.establishmentTypeId),
+    //         comments: this.state.comments,
+    //         imageUrl: this.state.imageUrl,
+    //         longitude: response[0].lon,
+    //         latitude: response[0].lat
+
+    //     }
+
+    //     console.log("LON AND LAT", response[0].lon, response[0].lat)
+    //     return rack
+    // })
+    // .then(rackObj =>  Data.postRack(rackObj) )
+    // .then(() => this.props.history.push("/myracks"))
+
+
+
     updateMyRack = event => {
         event.preventDefault()
         this.setState({ loadingStatus: true })
+        ExternalApi.getLocationIQData(this.state.address)
+        .then(response => {
         const editedRack = {
             id: this.props.match.params.rackId,
             userId: userId,
@@ -44,13 +71,15 @@ export default class RackEditForm extends Component {
             establishmentTypeId: parseInt(this.state.establishmentTypeId),
             comments: this.state.comments,
             imageUrl: this.state.imageUrl,
-            longitude: this.state.longitude,
-            latitude: this.state.latitude
+            longitude: response[0].lon,
+            latitude: response[0].lat
         }
-        console.log("EDITED RACK", editedRack)
-        Data.updateRack(editedRack)
-            .then(() => this.props.history.push("/myracks"))
 
+        console.log("EDITED RACK", editedRack)
+        return editedRack
+    })
+       .then(rackObj => Data.updateRack(rackObj))
+            .then(() => this.props.history.push("/myracks"))
     }
 
     uploadWidget = () => {
@@ -160,18 +189,21 @@ export default class RackEditForm extends Component {
                             <>
                             <img className="uploaded-image" src={this.state.imageUrl} alt="" />
                             <button type="button" onClick={this.deleteImage}>Delete Photo</button>
+                            <br></br>
                             </> : 
                             <>
                             <img className="uploaded-image" src={this.state.imageUrl} alt="" />
                             <button onClick={this.uploadWidget.bind(this)} className="button">
                             Upload Photo
-                            </button> </>}
+                            </button> 
+                            <br></br>
+                            </>}
                             {/* <button type="button" onClick={this.addPhoto} */}
 
                                 <button type="button" disabled={this.state.loadingStatus}
                                 onClick={this.updateMyRack}
                                 className="button"
-                            >Update</button>
+                            >Update Rack</button>
 
             </React.Fragment>
         )

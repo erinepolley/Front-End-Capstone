@@ -1,13 +1,14 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
 import Data from '../../modules/Data'
+
 export default class Login extends Component {
     state = {
         email: "",
         password: ""
     }
-//TODO: Figure out how to get nav bar off this page.
-handleFieldChange = (event) => {
+
+    handleFieldChange = (event) => {
     const stateToChange = {}
     stateToChange[event.target.id] = event.target.value
     this.setState(stateToChange)

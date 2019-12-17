@@ -23,8 +23,6 @@ export default class App extends Component {
         user: this.isAuthenticated()
       });
     }
-  
-
 
     clearUser = () =>  {
       localStorage.removeItem("credentials")
