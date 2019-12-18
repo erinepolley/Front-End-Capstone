@@ -1,12 +1,14 @@
+import Token from "../ApiKeys"
+
 const nashGovUrl = "https://data.nashville.gov/resource/yjju-hypq.json/?status=Existing"
-const locationIQUrl = "https://eu1.locationiq.com/v1/search.php?key=pk.3e4c309fdeda86286e9dcc98f0c5a94f"
+const locationIQUrl = `https://eu1.locationiq.com/v1/search.php?key=${Token.locationIQToken}`
 export default {
 getGovApiData () {
     return fetch(`${nashGovUrl}`,
     {
         "headers": {
             "Accept": "application/json",
-            "X-App-Token": "P7SZS21rPkPvHmuIvW4glESQf"
+            "X-App-Token": `${Token.nashvilleGovToken}`
         }
     })
     .then(response => response.json())
