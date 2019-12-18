@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">');
+
 .App {
   text-align: center;
 }
@@ -39,3 +42,15 @@
 .uploaded-image {
   width: 300px;
 } 
+
+.nav-title {
+  font-family: "Roboto Mono", sans-serif;
+}
+
+body {
+font-family: "Josefin Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Roboto Mono", sans-serif;
+  }

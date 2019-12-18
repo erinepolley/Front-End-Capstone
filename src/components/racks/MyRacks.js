@@ -1,10 +1,16 @@
 import React, { Component } from 'react'
 import Data from '../../modules/Data'
 import RackCard from './RackCard'
+import './RackForms.css'
+
+
+
+
 
 export default class MyRacks extends Component {
     state = {
-        racks: []
+        racks: [],
+        hover: false
     }
     
     componentDidMount() {
@@ -34,7 +40,7 @@ export default class MyRacks extends Component {
         return (
             <>
                 <h1>My Racks</h1>
-                <h2>Racks that I've added around town</h2>
+                <h2>Racks That I've Added Around Town</h2>
                 <div className="rack-cards">
                     {this.state.racks.map(rack =>
                         <RackCard

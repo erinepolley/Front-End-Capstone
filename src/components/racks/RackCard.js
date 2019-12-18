@@ -9,14 +9,16 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { textAlign } from '@material-ui/system';
-
+import './RackForms.css'
+import '../App.css'
 
 //Using material UI on this page for cards.
 
 const useStyles = makeStyles({
     card: {
         maxWidth: 345,
-    }
+    },
+
 });
 
 export default function RackCard(props) {
@@ -35,27 +37,28 @@ export default function RackCard(props) {
                         src={`${props.rack.imageUrl}`}
                         title="Bike Rack"
                     />
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="h2">
-                            Rack Location: {props.rack.establishmentName}
+                    <CardContent className='reg-test'>
+                        <h1>{props.rack.establishmentName}</h1>
+                        {/* <Typography gutterBottom variant="h5" component="h2">
+                           {props.rack.establishmentName}
+                        </Typography> */}
+                        <Typography variant="body2" color="textSecondary" component="p">
+                            <strong>Type:</strong> {props.rack.establishmentType.establishmentType}
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
-                            Type: {props.rack.establishmentType.establishmentType}
+                        <strong>Address:</strong> {props.rack.address}
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
-                            Address: {props.rack.address}
-                        </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                            Capacity: {props.rack.capacity} bikes
+                        <strong>Capacity:</strong> {props.rack.capacity} bikes
                                 </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
-                            Comments: {props.rack.comments}
+                        <strong>Comments:</strong> {props.rack.comments}
                         </Typography>
                         </CardContent>
                     </CardActionArea>
             <CardActions>
-                <Link to={`/edit/${props.rack.id}`}><button>Edit</button></Link>
-                <button type="button" onClick={() => {props.deleteThisRack(props.rack.id)}}>Delete</button>
+                <Link to={`/edit/${props.rack.id}`}><button className="button">Edit</button></Link>
+                <button className= "button" type="button" onClick={() => {props.deleteThisRack(props.rack.id)}}>Delete</button>
             </CardActions>
         </Card>
         </div>
