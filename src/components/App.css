@@ -51,6 +51,10 @@ body {
 font-family: "Josefin Sans", sans-serif;
 }
 
-h1 {
+h1, h2 {
+  font-family: "Roboto Mono", sans-serif;
+  }
+
+ul {
   font-family: "Roboto Mono", sans-serif;
   }

@@ -17,6 +17,7 @@ import '../App.css'
 const useStyles = makeStyles({
     card: {
         maxWidth: 345,
+
     },
 
 });
@@ -38,22 +39,24 @@ export default function RackCard(props) {
                         title="Bike Rack"
                     />
                     <CardContent className='reg-test'>
-                        <h1>{props.rack.establishmentName}</h1>
+                        <h1 className="card-header">{props.rack.establishmentName}</h1><br></br>
                         {/* <Typography gutterBottom variant="h5" component="h2">
                            {props.rack.establishmentName}
                         </Typography> */}
-                        <Typography variant="body2" color="textSecondary" component="p">
+                        {/* <Typography  */}
+                        <p className="card-info" variant="body2" color="textSecondary" component="p">
                             <strong>Type:</strong> {props.rack.establishmentType.establishmentType}
-                        </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                        <strong>Address:</strong> {props.rack.address}
-                        </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                        <strong>Capacity:</strong> {props.rack.capacity} bikes
-                                </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
+                        </p>
+                        {/* </Typography> */}
+                        <p className="card-info" variant="body2" color="textSecondary" component="p">
+                        <strong>Address:</strong> {props.rack.address}</p>
+
+                        <p className="card-info" variant="body2" color="textSecondary" component="p">
+                        <strong>Capacity:</strong> {props.rack.capacity} bikes </p>
+
+                        <p className="card-info" variant="body2" color="textSecondary" component="p">
                         <strong>Comments:</strong> {props.rack.comments}
-                        </Typography>
+                        </p>
                         </CardContent>
                     </CardActionArea>
             <CardActions>

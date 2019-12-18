@@ -23,6 +23,7 @@ export default class MyRacks extends Component {
     }
     
     deleteThisRack = rackId => {
+        if(window.confirm("Are you sure you want to delete this bike rack?")) {
         // const userIdFromStorage = parseInt(localStorage.getItem("credentials"))
         // console.log("USER ID ON MY RACKS", userIdFromStorage)
         Data.deleteRack(rackId)
@@ -35,12 +36,13 @@ export default class MyRacks extends Component {
                     })
             })
     }
+}
 
     render() {
         return (
             <>
-                <h1>My Racks</h1>
-                <h2>Racks That I've Added Around Town</h2>
+                <h1 className="page-header">My Racks</h1>
+                <h2 className="page-header">Racks That I've Added Around Town</h2>
                 <div className="rack-cards">
                     {this.state.racks.map(rack =>
                         <RackCard
