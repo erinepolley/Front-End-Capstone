@@ -1,9 +1,15 @@
 .top-header {
     display: flex;
     flex-direction: row;
+    background-color: #505050;
+    /* justify-content: center; */
 }
 
 .icon {
-    width: 20%;
-    padding: 10px;
+    width: 15%;
+    margin: 40px 20px;
+}
+
+h1 {
+    font-size: 100px;
 }

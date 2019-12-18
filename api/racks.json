@@ -212,18 +212,6 @@
       "latitude": "36.1441053886382"
     },
     {
-      "id": 23,
-      "userId": 4,
-      "capacity": 8,
-      "address": "15 Hermitage Ave, Nashville, TN 37204",
-      "establishmentName": "hithere",
-      "establishmentTypeId": 5,
-      "comments": "haha",
-      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/hjkvtmetygtbk8lddjow",
-      "longitude": "-86.769630603536",
-      "latitude": "36.1569552577143"
-    },
-    {
       "id": 25,
       "userId": 12,
       "capacity": 10,

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from "react-router-dom"
 import './NavBar.css'
-import '../App.css'
+// import '../App.css'
 class NavBar extends Component {
 
     render() {
@@ -10,9 +10,10 @@ class NavBar extends Component {
             <header>
                <div className="top-header">
                <img src={require('../BikeIcon.svg')} className="icon" alt="Bike Stash icon" />
+               <br></br>
                <h1 className="nav-title">Bike Stash
                </h1>
-               
+               </div>
                <nav>
              <ul className="nav-links">
                  <li><Link className="nav-link" to="/">Home</Link></li>
@@ -25,7 +26,7 @@ class NavBar extends Component {
                  </Link>
             </ul>       
             </nav> 
-            </div>
+           
             </header>
             </>
         )
