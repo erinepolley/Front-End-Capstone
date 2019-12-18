@@ -68,18 +68,6 @@
   ],
   "racks": [
     {
-      "id": 2,
-      "userId": 4,
-      "capacity": 4,
-      "address": "4408 Charlotte Pike",
-      "establishmentName": "ML Rose",
-      "establishmentTypeId": 1,
-      "comments": "On the left if you're looking at the building. Wooden posts.",
-      "imageUrl": null,
-      "longitude": -86.8406162,
-      "latitude": 36.1521963
-    },
-    {
       "id": 4,
       "userId": 4,
       "capacity": 6,
@@ -92,28 +80,16 @@
       "latitude": 36.20526205
     },
     {
+      "id": 5,
       "userId": 4,
       "capacity": 4,
-      "address": "4324 Harding Pike",
+      "address": "4324 Harding Pike, Nashville, TN",
       "establishmentName": "Publix",
       "establishmentTypeId": 4,
       "comments": "on the left side if you're facing building",
       "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/jqh79riu8hz30um9vv4c",
-      "longitude": -86.8548227,
-      "latitude": 36.1196949,
-      "id": 5
-    },
-    {
-      "id": 6,
-      "userId": 4,
-      "capacity": 4,
-      "address": "4408 Charlotte Pike",
-      "establishmentName": "ML Rose",
-      "establishmentTypeId": 1,
-      "comments": "in the front on the left of building",
-      "imageUrl": "",
-      "longitude": -86.908242,
-      "latitude": 36.127097
+      "longitude": "-86.8766429",
+      "latitude": "36.0968686"
     },
     {
       "userId": 4,
@@ -200,18 +176,6 @@
       "id": 13
     },
     {
-      "id": 14,
-      "userId": 4,
-      "capacity": 6,
-      "address": "1907 Eastland Ave. Nashville, TN",
-      "establishmentName": "lala",
-      "establishmentTypeId": 1,
-      "comments": "la",
-      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/hciapyepn39ywcbh7azc",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "userId": 4,
       "capacity": 6,
       "address": "1907 Eastland Ave. Nashville, TN",
@@ -222,66 +186,6 @@
       "longitude": "",
       "latitude": "",
       "id": 15
-    },
-    {
-      "userId": 4,
-      "capacity": 8,
-      "address": "1907 Eastland Ave. Nashville, TN",
-      "establishmentName": "rjla",
-      "establishmentTypeId": 2,
-      "comments": "lkrg",
-      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/gmfb90qs3xcpammsrhue",
-      "longitude": "",
-      "latitude": "",
-      "id": 16
-    },
-    {
-      "userId": 4,
-      "capacity": 6,
-      "address": "1907 Eastland Ave. Nashville, TN",
-      "establishmentName": "ksjdf",
-      "establishmentTypeId": 1,
-      "comments": "kjfs",
-      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/nqup4mzztpnehe61l4mx",
-      "longitude": "",
-      "latitude": "",
-      "id": 17
-    },
-    {
-      "userId": 4,
-      "capacity": 6,
-      "address": "1907 Eastland Ave. Nashville, TN",
-      "establishmentName": "fdk",
-      "establishmentTypeId": 1,
-      "comments": "skjdfh",
-      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/i2mxdgihlefmhdtgyicm",
-      "longitude": "",
-      "latitude": "",
-      "id": 18
-    },
-    {
-      "userId": 4,
-      "capacity": 8,
-      "address": "1907 Eastland Ave. Nashville, TN",
-      "establishmentName": "Rosepepper",
-      "establishmentTypeId": 1,
-      "comments": "near side",
-      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/k5l5nqraic3lbpkvbwbk",
-      "longitude": "-86.7348796666667",
-      "latitude": "36.1826703333333",
-      "id": 19
-    },
-    {
-      "userId": 4,
-      "capacity": 8,
-      "address": "1907 Eastland Ave. Nashville, TN",
-      "establishmentName": "lksjd",
-      "establishmentTypeId": 1,
-      "comments": "lskjf",
-      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/n9zrpiiuh0nhqzjar9qt",
-      "longitude": "-86.7348796666667",
-      "latitude": "36.1826703333333",
-      "id": 20
     },
     {
       "id": 21,

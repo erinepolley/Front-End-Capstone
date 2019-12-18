@@ -75,7 +75,7 @@ export default class RackEditForm extends Component {
             latitude: response[0].lat
         }
 
-        console.log("EDITED RACK", editedRack)
+        // console.log("EDITED RACK", editedRack)
         return editedRack
     })
        .then(rackObj => Data.updateRack(rackObj))

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import L from 'leaflet';
 import API from '../../modules/Data'
 import ExternalApi from '../../modules/ExternalApi'
-
+import Token from '../../ApiKeys';
 const dummyDataPath = [
   [36.134842046153565, -86.75954818725587],
   [36.1339408866672, -86.75899028778078],
@@ -32,12 +32,12 @@ export default class Map extends Component {
 
     // add basemap
     L.tileLayer(
-      'https://api.mapbox.com/styles/v1/erinepolley/ck3ruko0s17fs1cnu0eg7hgqh/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZXJpbmVwb2xsZXkiLCJhIjoiY2szaGg5NXlxMDJkeDNjcG9lbWhhZ2lwcyJ9.OQHXLQXUggCqa_b4pqWyZQ',
+      `https://api.mapbox.com/styles/v1/erinepolley/ck3ruko0s17fs1cnu0eg7hgqh/tiles/256/{z}/{x}/{y}@2x?access_token=${Token.yourToken}`,
       {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         maxZoom: 18,
         id: 'mapbox.streets',
-        accessToken: 'pk.eyJ1IjoiZXJpbmVwb2xsZXkiLCJhIjoiY2szaGg5NXlxMDJkeDNjcG9lbWhhZ2lwcyJ9.OQHXLQXUggCqa_b4pqWyZQ'
+        accessToken: `${Token.yourToken}`
       }).addTo(this.map);
 
 
