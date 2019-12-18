@@ -2,8 +2,23 @@ import React, { Component } from 'react'
 import Data from '../../modules/Data'
 import ExternalApi from '../../modules/ExternalApi'
 import '../App.css'
+import DeleteIcon from '@material-ui/icons/Delete';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
 
+// const useStyles = makeStyles(theme => ({
+//   root: {
+//     color: theme.palette.text.primary,
+//   },
+//   icon: {
+//     margin: theme.spacing(1),
+//     fontSize: 32,
+//   },
+// }));
+
+// const classes = useStyles();
 const userId = parseInt(localStorage.getItem("credentials"))
+
 export default class RackEditForm extends Component {
 
     state = {
@@ -114,8 +129,8 @@ export default class RackEditForm extends Component {
             .then(types => this.setState({ establishmentTypes: types }))
     }
 
-    render() {
-        return (
+    render(){
+        return(
             <React.Fragment>
                 <form>
                     <fieldset>
@@ -189,6 +204,12 @@ export default class RackEditForm extends Component {
                             <>
                             <img className="uploaded-image" src={this.state.imageUrl} alt="" />
                             <button type="button" onClick={this.deleteImage}>Delete Photo</button>
+                            <Grid container className={this.renderclasses.root}>
+
+                            <Grid item xs={8}>
+                            <DeleteIcon className={this.classes.icon} />
+                            </Grid>
+                            </Grid>
                             <br></br>
                             </> : 
                             <>
@@ -207,6 +228,6 @@ export default class RackEditForm extends Component {
 
             </React.Fragment>
         )
+                                
     }
-
 }
