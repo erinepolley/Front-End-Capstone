@@ -171,7 +171,7 @@ export default class RackEditForm extends Component {
                             <label htmlFor="comments">Comments:</label>
                             <br></br>
                             <input
-                                type="text"
+                                type="textarea"
                                 required
                                 className="form-field"
                                 onChange={this.handleFieldChange}

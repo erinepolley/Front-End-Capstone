@@ -57,6 +57,7 @@ p.card-info {
 h1.card-header {
     margin-bottom: 0;
     background-color: white;
+    font-size: 30px;
 }
 
 .page-header {

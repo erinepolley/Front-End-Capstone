@@ -62,9 +62,7 @@ export default class Map extends Component {
       })
 
       )//**BASE CODE FOR RENDERING TO MAP FROM LEAFLET
-    //   L.marker([coords.latitude, coords.longitude])
-    //     .bindPopup('This is your current <strong>location</strong>')
-    //     .addTo(this.map);
+
 
     //Gets data from the external Nashville.gov API with all city-provided racks
     ExternalApi.getGovApiData()
@@ -88,12 +86,16 @@ export default class Map extends Component {
     // }
     // navigator.geolocation.getCurrentPosition(position => {
     //   const coords = position.coords;
-    //   this.map.setView([coords.latitude, coords.longitude], 16);
+    //   this.map.setView([coords.latitude, coords.longitude], 13);
 
     //   L.marker([coords.latitude, coords.longitude])
     //     .bindPopup('This is your current <strong>location</strong>')
     //     .addTo(this.map);
     // });
+
+    // L.marker([coords.latitude, coords.longitude])
+    // .bindPopup('This is your current <strong>location</strong>')
+    // .addTo(this.map);
 
     // log user clicks
     this.map.on('click', event => {
