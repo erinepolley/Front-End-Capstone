@@ -22,7 +22,7 @@ class NavBar extends Component {
                  <Link className="nav-link" to="/login">
                  <li>
                         <span onClick={this.props.clearUser}>Log Out</span>
-                     </li>
+                </li>
                  </Link>
             </ul>       
             </nav> 

@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 import Data from '../../modules/Data'
 import ExternalApi from '../../modules/ExternalApi'
 import '../App.css'
-import DeleteIcon from '@material-ui/icons/Delete';
-import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
-// import { makeStyles } from '@material-ui/core/styles';
+import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline'
 
 // const useStyles = makeStyles(theme => ({
 //   root: {
@@ -50,30 +48,6 @@ export default class RackEditForm extends Component {
         // console.log("STATE AFTER DELETE RACK IN EDIT FORM", this.state)
     }
 }
-
-    // ExternalApi.getLocationIQData(this.state.address)
-    // .then(response => {
-
-    //     const rack = {
-    //         userId: parseInt(localStorage.getItem("credentials")),
-    //         capacity: parseInt(this.state.capacity),
-    //         address: this.state.address,
-    //         establishmentName: this.state.establishmentName,
-    //         establishmentTypeId: parseInt(this.state.establishmentTypeId),
-    //         comments: this.state.comments,
-    //         imageUrl: this.state.imageUrl,
-    //         longitude: response[0].lon,
-    //         latitude: response[0].lat
-
-    //     }
-
-    //     console.log("LON AND LAT", response[0].lon, response[0].lat)
-    //     return rack
-    // })
-    // .then(rackObj =>  Data.postRack(rackObj) )
-    // .then(() => this.props.history.push("/myracks"))
-
-
 
     updateMyRack = event => {
         event.preventDefault()
@@ -139,10 +113,8 @@ export default class RackEditForm extends Component {
                             <>
                             <span>
                             <img className="uploaded-image-edit" src={this.state.imageUrl} alt="" />
-                            <button className="button "type="button" onClick={this.deleteImage}>
-                            <DeleteOutlineIcon 
-                            // className={this.classes.icon} 
-                            />
+                            <button className="button" type="button" onClick={this.deleteImage}>
+                            <DeleteOutlineIcon />
                             </button>
                             </span>
                             <br></br>
