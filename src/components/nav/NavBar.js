@@ -15,6 +15,7 @@ class NavBar extends Component {
                </h1>
                </div>
                <nav>
+               <div >
              <ul className="nav-links">
                  <li><Link className="nav-link" to="/">Home</Link></li>
                  <li><Link className="nav-link" to="/myracks">My Racks</Link></li>
@@ -24,7 +25,8 @@ class NavBar extends Component {
                         <span onClick={this.props.clearUser}>Log Out</span>
                 </li>
                  </Link>
-            </ul>       
+            </ul>
+            </div>       
             </nav> 
            
             </header>
