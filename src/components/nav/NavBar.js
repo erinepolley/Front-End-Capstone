@@ -15,16 +15,18 @@ class NavBar extends Component {
                </h1>
                </div>
                <nav>
-             <ul className="nav-links">
-                 <li><Link className="nav-link" to="/">Home</Link></li>
-                 <li><Link className="nav-link" to="/myracks">My Racks</Link></li>
-                 <li><Link className="nav-link" to="/add">Add Rack</Link></li>
+               <div >
+             <div className="nav-links">
+                 <p><Link className="nav-link" to="/">Home</Link></p>
+                 <p><Link className="nav-link" to="/myracks">My Racks</Link></p>
+                 <p><Link className="nav-link" to="/add">Add Rack</Link></p>
                  <Link className="nav-link" to="/login">
-                 <li>
+                 <p>
                         <span onClick={this.props.clearUser}>Log Out</span>
-                     </li>
+                </p>
                  </Link>
-            </ul>       
+            </div>
+            </div>       
             </nav> 
            
             </header>

@@ -1,15 +1,49 @@
 .top-header {
     display: flex;
     flex-direction: row;
-    background-color: #505050;
     /* justify-content: center; */
 }
 
 .icon {
-    width: 15%;
-    margin: 40px 20px;
+    height: 125px;
+    width: 125px;
+    margin: 10px 15px;
 }
 
-h1 {
-    font-size: 100px;
+h1.nav-title {
+    font-size: 50px;
+    margin-top: 40px;
+    color: #505050
 }
+
+/* box with nav links */
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+    /* background-color:  #909090; */
+    /* background-color: #BFA3A8; */
+    background-color:#DEBDC3;
+}
+
+/* each link in nav bar */
+a.nav-link {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: flex-end; */
+    margin-top: 0px;
+    /* background-color: #909090; */
+    color: ghostwhite;
+    text-decoration: none;
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 17px;
+}
+
+a.nav-link:hover {
+    color: #64deca
+}
+
+/* a.nav-link: hover {
+    cursor: pointer
+} */

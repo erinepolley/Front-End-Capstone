@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Data from '../../modules/Data'
 import ExternalApi from '../../modules/ExternalApi'
+import MyLocationIcon from '@material-ui/icons/MyLocation';
 import './RackForms.css'
 
 export default class AddRack extends Component {
@@ -15,6 +16,8 @@ export default class AddRack extends Component {
         establishmentTypes: [],
         longitude: "",
         latitude: "",
+        xCord: "",
+        yCord: "",
         loadingStatus: false
     }
 
@@ -75,10 +78,28 @@ export default class AddRack extends Component {
                 this.setState({ imageUrl: `https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/${result[0].public_id}` })
             })
     }
-    //TODO: get the value of the input field for address
-    //TODO: use getLocationIQData to return an object with said value with function below
-    //TODO: target longitude and latitude in object, and use it to set long and lat state
-    //TODO: 
+//TODO: on "add rack", if address==="" || if xCord,
+//TODO: then run add rack with lat and long keys equal to X and Y Cord.
+//TODO: otherwise, run the regular add rack 
+//TODO: HOWEVER, will have to have reverse geocoding to convert lat/lon values to address!!!
+
+    displayLocationInfo = (position) => {
+        this.setState({
+          xCord: position.coords.latitude,
+          yCord: position.coords.longitude
+        })
+        console.log(this.state)
+    }
+
+    getCurrentLocation = () => {
+        console.log("AM I HERE?")
+    if (navigator.geolocation) {
+        console.log("I can do it!")
+        navigator.geolocation.getCurrentPosition(this.displayLocationInfo);
+      } else {
+          console.log("Geolocation not supported.")
+      }
+    }
 
     componentDidMount() {
         Data.getEstablishmentTypes()
@@ -101,8 +122,14 @@ export default class AddRack extends Component {
 
                             <label htmlFor="address">Address:</label>
                             <br></br>
-                            <input type="text" required onChange={this.handleFieldChange}
+                            <input type="text" className="form-field" required onChange={this.handleFieldChange}
                                 id="address" placeholder="1907 Eastland Ave., Nashville, TN" />
+                                {/* <div className="tooltip"> */}
+                                <button className="location-button" type="button" onClick={this.getCurrentLocation}>
+                                <MyLocationIcon />
+                                </button>
+                                {/* </div> */}
+                                <span className="tooltiptext">Use Current Location</span>
                             <br></br>
                             <label htmlFor="establishmentTypeId">Establishment Type:</label>
                             <br></br>
@@ -126,13 +153,13 @@ export default class AddRack extends Component {
                             <label htmlFor="capacity">Capacity:</label>
                             <br></br>
                             <input type="text" required onChange={this.handleFieldChange}
-                                id="capacity" placeholder="6" />
+                                id="capacity" className="form-field" placeholder="6" />
                             <br></br>
 
                             <label htmlFor="comments">Comments:</label>
                             <br></br>
                             <input type="textfield" required onChange={this.handleFieldChange}
-                                id="comments" placeholder="near side patio" />
+                                id="comments" className="form-field" placeholder="near side patio" />
                             <br></br>
                         </div>
 
