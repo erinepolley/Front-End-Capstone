@@ -222,6 +222,18 @@
       "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/dgn0kiqg0msdbl3waxbf",
       "longitude": "-86.807846",
       "latitude": "36.180805"
+    },
+    {
+      "userId": 4,
+      "capacity": 4,
+      "address": "431 11th Ave N, Nashville, TN 37203",
+      "establishmentName": "ML ROSE",
+      "establishmentTypeId": 1,
+      "comments": "skjg",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/ubzcqdtuvsi042ruewk8",
+      "longitude": "-86.7909379067836",
+      "latitude": "36.1630323997308",
+      "id": 26
     }
   ],
   "establishmentTypes": [
