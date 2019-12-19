@@ -1,4 +1,4 @@
-button {
+.button {
         border: 1px solid black;
         border-radius: 3px;
         background-color: #64deca;
@@ -14,14 +14,65 @@ button {
         text-transform: uppercase;
         /* -webkit-transition: background .3s,color .3s;
         transition: background .3s,color .3s; */
-      /* a:hover {
-        color: #64deca;
-        text-decoration: none;
-     } */
-    }
+}
 
+.button:hover {
+    transition: color .15s ease-in;
+    color: #191919;
+    background-color: white;
+    border: 1px solid #64deca;
+    cursor: pointer;
+        /* text-decoration: none */
+     }
+
+/* targets the div with all the racks in MyRacks.js */
 .rack-cards {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 50px
 }
+/* targets each card div in RackCard.js*/
+.cards {
+    margin: 25px
+}
+
+.card-info {
+    font: "Josefin Sans", sans-serif;
+    font-size: 17px;
+    /* line-height: 1.2px; */
+    color: #808080;
+}
+
+p.card-info {
+    margin-top: 0;
+}
+/* .reg-test {
+    /* line-height: 5px; */
+    /* display: flex;
+    flex-wrap: wrap;  */
+
+h1.card-header {
+    margin-bottom: 0;
+}
+
+.page-header {
+    text-align: center;
+}
+
+h2.page-header {
+    margin-bottom: 0;
+}
+
+div.rack-cards {
+    margin-top: 11px;
+}
+
+img.uploaded-image-edit {
+    margin-bottom: 0;
+    padding: 0;
+    max-width: 345px;
+}
+ 
+
+

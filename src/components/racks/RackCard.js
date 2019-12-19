@@ -9,14 +9,17 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { textAlign } from '@material-ui/system';
-
+import './RackForms.css'
+import '../App.css'
 
 //Using material UI on this page for cards.
 
 const useStyles = makeStyles({
     card: {
         maxWidth: 345,
-    }
+
+    },
+
 });
 
 export default function RackCard(props) {
@@ -35,27 +38,30 @@ export default function RackCard(props) {
                         src={`${props.rack.imageUrl}`}
                         title="Bike Rack"
                     />
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="h2">
-                            Rack Location: {props.rack.establishmentName}
-                        </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                            Type: {props.rack.establishmentType.establishmentType}
-                        </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                            Address: {props.rack.address}
-                        </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                            Capacity: {props.rack.capacity} bikes
-                                </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                            Comments: {props.rack.comments}
-                        </Typography>
+                    <CardContent className='reg-test'>
+                        <h1 className="card-header">{props.rack.establishmentName}</h1><br></br>
+                        {/* <Typography gutterBottom variant="h5" component="h2">
+                           {props.rack.establishmentName}
+                        </Typography> */}
+                        {/* <Typography  */}
+                        <p className="card-info" variant="body2" color="textSecondary" component="p">
+                            <strong>Type:</strong> {props.rack.establishmentType.establishmentType}
+                        </p>
+                        {/* </Typography> */}
+                        <p className="card-info" variant="body2" color="textSecondary" component="p">
+                        <strong>Address:</strong> {props.rack.address}</p>
+
+                        <p className="card-info" variant="body2" color="textSecondary" component="p">
+                        <strong>Capacity:</strong> {props.rack.capacity} bikes </p>
+
+                        <p className="card-info" variant="body2" color="textSecondary" component="p">
+                        <strong>Comments:</strong> {props.rack.comments}
+                        </p>
                         </CardContent>
                     </CardActionArea>
             <CardActions>
-                <Link to={`/edit/${props.rack.id}`}><button>Edit</button></Link>
-                <button type="button" onClick={() => {props.deleteThisRack(props.rack.id)}}>Delete</button>
+                <Link to={`/edit/${props.rack.id}`}><button className="button">Edit</button></Link>
+                <button className= "button" type="button" onClick={() => {props.deleteThisRack(props.rack.id)}}>Delete</button>
             </CardActions>
         </Card>
         </div>

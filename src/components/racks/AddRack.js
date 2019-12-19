@@ -144,7 +144,7 @@ export default class AddRack extends Component {
                     Upload Photo
                         </button>
 
-                <button type="button" disabled={this.state.loadingStatus}
+                <button type="button" className="button" disabled={this.state.loadingStatus}
                     onClick={this.addNewRack}>Add Rack</button>
             </>
         )

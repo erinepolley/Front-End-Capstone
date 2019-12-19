@@ -2,9 +2,25 @@ import React, { Component } from 'react'
 import Data from '../../modules/Data'
 import ExternalApi from '../../modules/ExternalApi'
 import '../App.css'
+import DeleteIcon from '@material-ui/icons/Delete';
+import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
+// import { makeStyles } from '@material-ui/core/styles';
+
+// const useStyles = makeStyles(theme => ({
+//   root: {
+//     color: theme.palette.text.primary,
+//   },
+//   icon: {
+//     margin: theme.spacing(1),
+//     fontSize: 32,
+//   },
+// }));
+
 
 const userId = parseInt(localStorage.getItem("credentials"))
+
 export default class RackEditForm extends Component {
+    // classes = useStyles();
 
     state = {
         userId: "",
@@ -29,9 +45,11 @@ export default class RackEditForm extends Component {
 
     deleteImage = event => {
         event.preventDefault()
+        if(window.confirm("Are you sure you want to delete this photo?")) {
         this.setState({ imageUrl: "" })
-        console.log("STATE AFTER DELETE RACK IN EDIT FORM", this.state)
+        // console.log("STATE AFTER DELETE RACK IN EDIT FORM", this.state)
     }
+}
 
     // ExternalApi.getLocationIQData(this.state.address)
     // .then(response => {
@@ -114,9 +132,28 @@ export default class RackEditForm extends Component {
             .then(types => this.setState({ establishmentTypes: types }))
     }
 
-    render() {
-        return (
+    render(){
+        return(
             <React.Fragment>
+                            {this.state.imageUrl !== "" ?
+                            <>
+                            <span>
+                            <img className="uploaded-image-edit" src={this.state.imageUrl} alt="" />
+                            <button className="button "type="button" onClick={this.deleteImage}>
+                            <DeleteOutlineIcon 
+                            // className={this.classes.icon} 
+                            />
+                            </button>
+                            </span>
+                            <br></br>
+                            </> : 
+                            <>
+                            <img className="uploaded-image" src={this.state.imageUrl} alt="" />
+                            <button onClick={this.uploadWidget.bind(this)} className="button">
+                            Upload Photo
+                            </button> 
+                            <br></br>
+                            </>}
                 <form>
                     <fieldset>
                         <div className="formgrid">
@@ -185,19 +222,7 @@ export default class RackEditForm extends Component {
                             </fieldset>
                         </form>
                             
-                            {this.state.imageUrl !== "" ?
-                            <>
-                            <img className="uploaded-image" src={this.state.imageUrl} alt="" />
-                            <button type="button" onClick={this.deleteImage}>Delete Photo</button>
-                            <br></br>
-                            </> : 
-                            <>
-                            <img className="uploaded-image" src={this.state.imageUrl} alt="" />
-                            <button onClick={this.uploadWidget.bind(this)} className="button">
-                            Upload Photo
-                            </button> 
-                            <br></br>
-                            </>}
+
                             {/* <button type="button" onClick={this.addPhoto} */}
 
                                 <button type="button" disabled={this.state.loadingStatus}
@@ -207,6 +232,6 @@ export default class RackEditForm extends Component {
 
             </React.Fragment>
         )
+                                
     }
-
 }

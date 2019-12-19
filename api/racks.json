@@ -212,30 +212,6 @@
       "latitude": "36.1441053886382"
     },
     {
-      "id": 23,
-      "userId": 4,
-      "capacity": 8,
-      "address": "15 Hermitage Ave, Nashville, TN 37204",
-      "establishmentName": "hithere",
-      "establishmentTypeId": 5,
-      "comments": "haha",
-      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/hjkvtmetygtbk8lddjow",
-      "longitude": "-86.769630603536",
-      "latitude": "36.1569552577143"
-    },
-    {
-      "id": 24,
-      "userId": 4,
-      "capacity": 10,
-      "address": "1800 Eastland Ave Nashville TN",
-      "establishmentName": "WHAT",
-      "establishmentTypeId": 5,
-      "comments": "WHAT??",
-      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/hklmupm22sn7mmqcloeh",
-      "longitude": "-86.738358",
-      "latitude": "36.182776"
-    },
-    {
       "id": 25,
       "userId": 12,
       "capacity": 10,
@@ -246,6 +222,18 @@
       "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/dgn0kiqg0msdbl3waxbf",
       "longitude": "-86.807846",
       "latitude": "36.180805"
+    },
+    {
+      "userId": 4,
+      "capacity": 4,
+      "address": "431 11th Ave N, Nashville, TN 37203",
+      "establishmentName": "ML ROSE",
+      "establishmentTypeId": 1,
+      "comments": "skjg",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/ubzcqdtuvsi042ruewk8",
+      "longitude": "-86.7909379067836",
+      "latitude": "36.1630323997308",
+      "id": 26
     }
   ],
   "establishmentTypes": [

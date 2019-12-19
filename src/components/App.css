@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">');
+
 .App {
   text-align: center;
 }
@@ -31,7 +34,7 @@
 }
 
 #map {
-  height: 500px;
+  height:500px;
   width: 100%;
   margin: 50px auto 0 auto;
 }
@@ -39,3 +42,23 @@
 .uploaded-image {
   width: 300px;
 } 
+
+.nav-title {
+  font-family: "Roboto Mono", sans-serif;
+}
+
+body {
+font-family: "Josefin Sans", sans-serif;
+}
+
+h1, h2 {
+  font-family: "Roboto Mono", sans-serif;
+  }
+
+ul {
+  font-family: "Roboto Mono", sans-serif;
+  }
+
+img {
+  max-width: 345;
+}
