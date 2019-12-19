@@ -1,20 +1,10 @@
 import React, { Component } from 'react'
 import Data from '../../modules/Data'
 import ExternalApi from '../../modules/ExternalApi'
-import '../App.css'
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline'
-
-// const useStyles = makeStyles(theme => ({
-//   root: {
-//     color: theme.palette.text.primary,
-//   },
-//   icon: {
-//     margin: theme.spacing(1),
-//     fontSize: 32,
-//   },
-// }));
-
-
+import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import '../App.css'
+import './RackForms.css'
 const userId = parseInt(localStorage.getItem("credentials"))
 
 export default class RackEditForm extends Component {
@@ -111,13 +101,12 @@ export default class RackEditForm extends Component {
             <React.Fragment>
                             {this.state.imageUrl !== "" ?
                             <>
-                            <span>
+                            <div className="pic-delete-icon">
                             <img className="uploaded-image-edit" src={this.state.imageUrl} alt="" />
-                            <button className="button" type="button" onClick={this.deleteImage}>
+                            <button className="delete-button" type="button" onClick={this.deleteImage}>
                             <DeleteOutlineIcon />
                             </button>
-                            </span>
-                            <br></br>
+                            </div>
                             </> : 
                             <>
                             <img className="uploaded-image" src={this.state.imageUrl} alt="" />

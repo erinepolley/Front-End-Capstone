@@ -122,7 +122,7 @@ export default class AddRack extends Component {
 
                             <label htmlFor="address">Address:</label>
                             <br></br>
-                            <input type="text" required onChange={this.handleFieldChange}
+                            <input type="text" className="form-field" required onChange={this.handleFieldChange}
                                 id="address" placeholder="1907 Eastland Ave., Nashville, TN" />
                                 {/* <div className="tooltip"> */}
                                 <button className="location-button" type="button" onClick={this.getCurrentLocation}>
@@ -153,13 +153,13 @@ export default class AddRack extends Component {
                             <label htmlFor="capacity">Capacity:</label>
                             <br></br>
                             <input type="text" required onChange={this.handleFieldChange}
-                                id="capacity" placeholder="6" />
+                                id="capacity" className="form-field" placeholder="6" />
                             <br></br>
 
                             <label htmlFor="comments">Comments:</label>
                             <br></br>
                             <input type="textfield" required onChange={this.handleFieldChange}
-                                id="comments" placeholder="near side patio" />
+                                id="comments" className="form-field" placeholder="near side patio" />
                             <br></br>
                         </div>
 
