@@ -17,7 +17,7 @@ class NavBar extends Component {
                <nav>
                <div >
              <div className="nav-links">
-                 <p><Link className="nav-link" to="/">Home</Link></p>
+                 <p><Link className="nav-link" to="/">Map</Link></p>
                  <p><Link className="nav-link" to="/myracks">My Racks</Link></p>
                  <p><Link className="nav-link" to="/add">Add Rack</Link></p>
                  <Link className="nav-link" to="/login">

@@ -76,8 +76,8 @@
       "establishmentTypeId": 1,
       "comments": "In the front of the bar",
       "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/b9ro6gfbl51aq22szw7s",
-      "longitude": -86.7632038301232,
-      "latitude": 36.20526205
+      "longitude": "-86.7632038301232",
+      "latitude": "36.20526205"
     },
     {
       "id": 5,
@@ -104,7 +104,7 @@
       "id": 7
     },
     {
-      "userId": 4,
+      "userId": 3,
       "capacity": 12,
       "address": "4210 Harding Pike, Nashville, TN 37205",
       "establishmentName": "Aquinas College",
@@ -164,7 +164,7 @@
       "id": 12
     },
     {
-      "userId": 4,
+      "userId": 5,
       "capacity": 6,
       "address": "235 5th Ave N, Nashville, TN 37219",
       "establishmentName": "Frothy Monkey Downtown",
@@ -174,18 +174,6 @@
       "longitude": -86.7808867142857,
       "latitude": 36.1640722619048,
       "id": 13
-    },
-    {
-      "userId": 4,
-      "capacity": 6,
-      "address": "1907 Eastland Ave. Nashville, TN",
-      "establishmentName": "Rosepepper",
-      "establishmentTypeId": 1,
-      "comments": "near sie",
-      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/xdzwxs2xes2yaj1dzudj",
-      "longitude": "",
-      "latitude": "",
-      "id": 15
     },
     {
       "id": 21,
