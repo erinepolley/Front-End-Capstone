@@ -38,7 +38,7 @@
 .cards {
     margin: 25px
 }
-
+/* the lines of info within every card on My Racks */
 .card-info {
     font: "Josefin Sans", sans-serif;
     font-size: 17px;
@@ -137,7 +137,7 @@ img.uploaded-image-edit {
       margin-bottom: 10px;
       
   }
-
+/* button with trash can */
   .delete-button {
         border: 1px solid black;
         border-radius: 3px;
@@ -171,12 +171,13 @@ img.uploaded-image-edit {
     font-family: "Josefin Sans", sans-serif;
 }
 
+/* container that holds all form stuff */
 .formgrid {
   line-height: 12px;
   border: 1px double #808080;
   padding: 20px;
 }
-
+/* Each input field on form */
 input.form-field {
     border-radius: 7px;
     position: 'relative';
@@ -191,8 +192,12 @@ input.form-field {
     margin-bottom: 12px;
     /* box-shadow: 1px 3px; */
   }
+
+  /* #comments {
+
+  } */
   
   .form-field:focus {
-    border: 1px solid #555;
+    border: 2px solid #adb0b4;
   }
 

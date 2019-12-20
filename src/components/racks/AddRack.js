@@ -155,14 +155,14 @@ export default class AddRack extends Component {
 
                             <label htmlFor="capacity">Capacity:</label>
                             <br></br>
-                            <input type="text" required onChange={this.handleFieldChange}
+                            <input type="number" required onChange={this.handleFieldChange}
                                 id="capacity" className="form-field" placeholder="6" />
                             <br></br>
 
                             <label htmlFor="comments">Comments:</label>
                             <br></br>
                             <input type="textfield" required onChange={this.handleFieldChange}
-                                id="comments" className="form-field" placeholder="near side patio" />
+                                id="comments" rows="10" className="form-field" placeholder="near side patio" />
                             <br></br>
                         </div>
 
