@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import Data from '../../modules/Data'
 import ExternalApi from '../../modules/ExternalApi'
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline'
-import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import '../App.css'
+import Tooltip from '@material-ui/core/Tooltip'
+// import '../App.css'
 import './RackForms.css'
 const userId = parseInt(localStorage.getItem("credentials"))
 
@@ -103,9 +103,11 @@ export default class RackEditForm extends Component {
                             <>
                             <div className="pic-delete-icon">
                             <img className="uploaded-image-edit" src={this.state.imageUrl} alt="" />
+                            <Tooltip title="Delete Photo" label="Delete Photo" placement="right">
                             <button className="delete-button" type="button" onClick={this.deleteImage}>
                             <DeleteOutlineIcon />
                             </button>
+                            </Tooltip>
                             </div>
                             </> : 
                             <>

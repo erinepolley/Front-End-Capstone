@@ -57,6 +57,7 @@ p.card-info {
 h1.card-header {
     margin-bottom: 0;
     background-color: white;
+    font-size: 25px
 }
 
 .page-header {
@@ -70,7 +71,7 @@ h2.page-header {
 div.rack-cards {
     margin-top: 11px;
 }
-
+/* Image on edit form */
 img.uploaded-image-edit {
     margin-bottom: 0;
     padding: 0;
@@ -105,7 +106,7 @@ img.uploaded-image-edit {
         /* text-decoration: none */
 } 
 
-.tooltip .tooltiptext {
+/* .tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
     background-color: black;
@@ -115,20 +116,20 @@ img.uploaded-image-edit {
     padding: 5px 0;
   
     /* Position the tooltip */
-    position: absolute;
-    z-index: 1;
-  }
+    /* position: absolute;
+    z-index: 1; */
+  /* } */
   
   .tooltip:hover .tooltiptext {
     visibility: visible;
-  }
+  } */
  
   /* div that contains pic and delete icon 
   in edit form */
   .pic-delete-icon {
       display: flex;
       /* justify-content: center; */
-      align-items: flex-end;
+      align-items: flex-start;
       margin-bottom: 10px;
       
   }
@@ -137,7 +138,7 @@ img.uploaded-image-edit {
         border: 1px solid black;
         border-radius: 3px;
         background-color: #64deca;
-        display: inline-block;
+        /* display: inline-block; */
         font-size: 14px;
         color: black;
         max-height: 50px;
@@ -145,7 +146,7 @@ img.uploaded-image-edit {
         margin-right: 10px;
         font-weight: 400;
         line-height: 1.2em;
-        padding: 15px;
+        padding: 10px 6px;
         font-family: "Roboto Mono", sans-serif;
         text-decoration: none;
         text-transform: uppercase;
@@ -162,11 +163,32 @@ img.uploaded-image-edit {
         /* text-decoration: none */
      }
 
-input {
-    margin-bottom: 5px;
-}
-
 .card-info {
     font-family: "Josefin Sans", sans-serif;
 }
+
+.formgrid {
+  line-height: 12px;
+  border: 1px double #808080;
+  padding: 20px;
+}
+
+input.form-field {
+    border-radius: 7px;
+    position: 'relative';
+    background-color: white;
+    border: 1px solid #adb0b4;
+    font-size: 16;
+    width: 260px;
+    height: 40px;
+    /* padding: 30px 50px; */
+    outline: none;
+    width: 25;
+    margin-bottom: 12px;
+    /* box-shadow: 1px 3px; */
+  }
+  
+  .form-field:focus {
+    border: 1px solid #555;
+  }
 

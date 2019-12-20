@@ -59,27 +59,12 @@ img {
   max-width: 345px;
 }
 /* All the forms!! */
-.form-field {
-  border-radius: 4;
-  position: 'relative';
-  background-color: white;
-  border: '1px solid #ced4da';
-  font-size: 16;
-  width: 'auto';
-  padding: '10px 12px';
-  /* box-shadow: 1px 3px; */
-  
-}
 
-.formgrid {
-  line-height: 10px;
-  border: 1px double #808080;
-  padding: 20px;
-}
 
 label {
   font-family: "Josefin Sans", sans-serif;
   margin-top: 15px;
+  font-size: 18px;
 }
 
 .tooltiptext {

@@ -176,18 +176,6 @@
       "id": 13
     },
     {
-      "userId": 4,
-      "capacity": 6,
-      "address": "1907 Eastland Ave. Nashville, TN",
-      "establishmentName": "Rosepepper",
-      "establishmentTypeId": 1,
-      "comments": "near sie",
-      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/xdzwxs2xes2yaj1dzudj",
-      "longitude": "",
-      "latitude": "",
-      "id": 15
-    },
-    {
       "id": 21,
       "userId": 11,
       "capacity": 7,

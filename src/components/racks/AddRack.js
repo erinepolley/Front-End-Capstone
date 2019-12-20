@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Data from '../../modules/Data'
 import ExternalApi from '../../modules/ExternalApi'
 import MyLocationIcon from '@material-ui/icons/MyLocation';
+import Tooltip from '@material-ui/core/Tooltip'
 import './RackForms.css'
 
 export default class AddRack extends Component {
@@ -116,7 +117,7 @@ export default class AddRack extends Component {
 
                             <label htmlFor="animalName">Name of Establishment:</label>
                             <br></br>
-                            <input type="text" required onChange={this.handleFieldChange}
+                            <input type="text" className="form-field" required onChange={this.handleFieldChange}
                                 id="establishmentName" placeholder="Rosepepper" />
                             <br></br>
 
@@ -124,12 +125,14 @@ export default class AddRack extends Component {
                             <br></br>
                             <input type="text" className="form-field" required onChange={this.handleFieldChange}
                                 id="address" placeholder="1907 Eastland Ave., Nashville, TN" />
-                                {/* <div className="tooltip"> */}
+
+                                <Tooltip title="Use Current Location" label="Use Current Location" placement="right" className="tooltiptext">
                                 <button className="location-button" type="button" onClick={this.getCurrentLocation}>
                                 <MyLocationIcon />
                                 </button>
-                                {/* </div> */}
-                                <span className="tooltiptext">Use Current Location</span>
+                                </Tooltip>
+                            
+                               {/* <span className="tooltiptext">Use Current Location</span> */}
                             <br></br>
                             <label htmlFor="establishmentTypeId">Establishment Type:</label>
                             <br></br>
