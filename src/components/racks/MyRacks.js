@@ -41,7 +41,7 @@ export default class MyRacks extends Component {
     render() {
         return (
             <>
-                <h1 className="page-header">My Racks</h1>
+                <h1 className="page-header">My Bike Racks</h1>
                 <h2 className="page-header">Racks That I've Added Around Town</h2>
                 <div className="rack-cards">
                     {this.state.racks.map(rack =>

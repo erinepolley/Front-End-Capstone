@@ -30,7 +30,7 @@ export default class RackEditForm extends Component {
         stateToChange[event.target.id] = event.target.value
         this.setState(stateToChange)
     }
-
+// This method goes with the trash can delete icon and sets the imageUrl in state to an empty string
     deleteImage = event => {
         event.preventDefault()
         if(window.confirm("Are you sure you want to delete this photo?")) {
@@ -38,7 +38,7 @@ export default class RackEditForm extends Component {
         // console.log("STATE AFTER DELETE RACK IN EDIT FORM", this.state)
     }
 }
-
+// Sending the updated rack to JSON.
     updateMyRack = event => {
         event.preventDefault()
         this.setState({ loadingStatus: true })
@@ -74,6 +74,7 @@ export default class RackEditForm extends Component {
             })
     }
 
+    // Getting the id from Application Views, passed as props
     componentDidMount() {
         Data.getRackToEdit(this.props.match.params.rackId)
             .then(rack => {
