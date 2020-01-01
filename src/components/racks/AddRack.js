@@ -46,6 +46,8 @@ export default class AddRack extends Component {
             event.preventDefault()
             this.setState({ loadingStatus: true })
             // this.sendLatLongToMap()
+
+            // Converting address to lat and lon
             ExternalApi.getLocationIQData(this.state.address)
             .then(response => {
     
@@ -62,7 +64,7 @@ export default class AddRack extends Component {
     
                 }
 
-                console.log("LON AND LAT", response[0].lon, response[0].lat)
+                // console.log("LON AND LAT", response[0].lon, response[0].lat)
                 return rack
             })
             .then(rackObj =>  Data.postRack(rackObj))
@@ -83,7 +85,7 @@ export default class AddRack extends Component {
 //TODO: then run add rack with lat and long keys equal to X and Y Cord.
 //TODO: otherwise, run the regular add rack 
 //TODO: HOWEVER, will have to have reverse geocoding to convert lat/lon values to address!!!
-
+//Getting lat annd lon from browser until line 105
     displayLocationInfo = (position) => {
         this.setState({
           xCord: position.coords.latitude,
@@ -102,6 +104,7 @@ export default class AddRack extends Component {
       }
     }
 
+    // Est types populates the dropdown so it doesn't show just numbers
     componentDidMount() {
         Data.getEstablishmentTypes()
             .then(types => this.setState({ establishmentTypes: types }))
