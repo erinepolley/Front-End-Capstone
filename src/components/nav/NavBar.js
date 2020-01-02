@@ -24,11 +24,11 @@ class NavBar extends Component {
                  <p><Link className="nav-link" to="/">Map</Link></p>
                  <p><Link className="nav-link" to="/myracks">My Racks</Link></p>
                  <p><Link className="nav-link" to="/add">Add Rack</Link></p>
-                 <Link className="nav-link" to="/login">
                  <p>
+                 <Link className="nav-link" to="/login">
                         <span onClick={this.props.clearUser}>Log Out</span>
-                </p>
                  </Link>
+                </p>
            </div>
             {/* </nav>  */}
            {/* </div>       */}

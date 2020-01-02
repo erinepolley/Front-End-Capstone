@@ -69,7 +69,7 @@
   "racks": [
     {
       "id": 4,
-      "userId": 4,
+      "userId": 1,
       "capacity": 6,
       "address": "320 E Trinity Ln, Nashville, TN 37207",
       "establishmentName": "East Nashville Beer Works",
@@ -128,7 +128,7 @@
       "latitude": 36.1273243797296
     },
     {
-      "userId": 4,
+      "userId": 1,
       "capacity": 12,
       "address": "3 City Ave #200, Nashville, TN 37209",
       "establishmentName": "Avo",
@@ -200,20 +200,8 @@
       "latitude": "36.1441053886382"
     },
     {
-      "id": 25,
-      "userId": 12,
-      "capacity": 10,
-      "address": "1800 14th Ave N, Nashville, TN",
-      "establishmentName": "HI",
-      "establishmentTypeId": 2,
-      "comments": "HI",
-      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/dgn0kiqg0msdbl3waxbf",
-      "longitude": "-86.807846",
-      "latitude": "36.180805"
-    },
-    {
       "id": 26,
-      "userId": 4,
+      "userId": 2,
       "capacity": 8,
       "address": "431 11th Ave N, Nashville, TN 37203",
       "establishmentName": "ML ROSE",
