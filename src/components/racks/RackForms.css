@@ -53,11 +53,11 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin: 50px
+    margin: 50px;
 }
 /* targets each card div in RackCard.js*/
 .cards {
-    margin: 25px
+    margin: 25px;
 }
 /* the lines of info within every card on My Racks */
 .card-info {
@@ -100,9 +100,18 @@ div.rack-cards {
 img.uploaded-image-edit {
     margin-bottom: 0;
     padding: 0;
-    max-width: 345px;
-    border: 1px solid #606060
+    width: 300px;
+    border: 1px solid #606060;
 }
+
+.edit-box {
+    margin-top: 25px;
+    display: flex;
+    /* flex-direction: row; */
+    /* align-items: center; */
+    justify-content: center;
+}
+
  /* Get Current Location button  */
  .location-button {
     border: 1px solid black;
@@ -130,33 +139,19 @@ img.uploaded-image-edit {
     cursor: pointer;
         /* text-decoration: none */
 } 
-
-/* .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-  
-    /* Position the tooltip */
-    /* position: absolute;
-    z-index: 1; */
-  /* } */
   
   .tooltip:hover .tooltiptext {
     visibility: visible;
-  } */
+  } 
  
   /* div that contains pic and delete icon 
   in edit form */
   .pic-delete-icon {
       display: flex;
       /* justify-content: center; */
-      align-items: flex-start;
-      margin-bottom: 10px;
-      
+      align-items: flex-end;
+      /* margin-bottom: 10px; */
+      /* margin-top: 380px; */
   }
 /* button with trash can */
   .delete-button {
@@ -192,6 +187,17 @@ img.uploaded-image-edit {
     font-family: "Josefin Sans", sans-serif;
 }
 
+/* form {
+    margin-top: 200px;
+} */
+
+.form-header {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 40px;
+    text-align: center;
+}
+
 /* container that holds all form stuff */
 .formgrid {
   line-height: 12px;
@@ -213,10 +219,6 @@ input.form-field, select {
     font-family: 'Josefin Sans', sans-serif;
     /* box-shadow: 1px 3px; */
   }
-
-  /* #comments {
-
-  } */
   
   .form-field:focus {
     border: 2px solid #adb0b4;

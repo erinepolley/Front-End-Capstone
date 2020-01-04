@@ -61,13 +61,11 @@ export default class AddRack extends Component {
                     imageUrl: this.state.imageUrl,
                     longitude: response[0].lon,
                     latitude: response[0].lat
-    
                 }
-
                 // console.log("LON AND LAT", response[0].lon, response[0].lat)
                 return rack
             })
-            .then(rackObj =>  Data.postRack(rackObj))
+            .then(rackObj => Data.postRack(rackObj))
             .then(() => this.props.history.push("/myracks"))
         }
     }
@@ -114,10 +112,10 @@ export default class AddRack extends Component {
     render() {
         return (
             <>
+                <h2 className="form-header">Add a Bike Rack</h2>
                 <form>
                     <fieldset>
                         <div className="formgrid">
-
                             <label htmlFor="animalName">Name of Establishment:</label>
                             <br></br>
                             <input type="text" className="form-field" required onChange={this.handleFieldChange}

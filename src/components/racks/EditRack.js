@@ -102,20 +102,24 @@ export default class RackEditForm extends Component {
             <React.Fragment>
                             {this.state.imageUrl !== "" ?
                             <>
-                            <div className="pic-delete-icon">
+                            <div className="edit-box">
                             <img className="uploaded-image-edit" src={this.state.imageUrl} alt="" />
-                            <Tooltip title="Delete Photo" label="Delete Photo" placement="right">
+                            <div className="pic-delete-icon">
+                            <Tooltip title="Delete Photo" label="Delete Photo" >
                             <button className="delete-button" type="button" onClick={this.deleteImage}>
                             <DeleteOutlineIcon />
                             </button>
                             </Tooltip>
                             </div>
+                            </div>
                             </> : 
                             <>
+                            <div className="edit-box">
                             <img className="uploaded-image" src={this.state.imageUrl} alt="" />
                             <button onClick={this.uploadWidget.bind(this)} className="button">
                             Upload Photo
                             </button> 
+                            </div>
                             <br></br>
                             </>}
                 <form>

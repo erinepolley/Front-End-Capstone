@@ -10,7 +10,7 @@ class NavBar extends Component {
             <>
             
             {/* <header>  */}
-                <div className="whole-header">
+               <div className="whole-header">
                <div className="top-header">
                <img src={require('../BikeIcon.svg')} className="icon" alt="Bike Stash icon" />
                <br></br>
