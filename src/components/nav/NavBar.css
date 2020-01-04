@@ -1,3 +1,14 @@
+.whole-header {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    top: 0;
+    width: 100%; 
+    z-index: 1; 
+    background-color: white;
+
+}
+
 .top-header {
     display: flex;
     flex-direction: row;
@@ -5,14 +16,15 @@
 }
 
 .icon {
-    height: 125px;
-    width: 125px;
+    height: 100px;
+    width: 100px;
     margin: 10px 15px;
 }
 
 h1.nav-title {
-    font-size: 50px;
-    margin-top: 40px;
+    font-size: 60px;
+    font-weight: 550;
+    margin-top: 25px;
     color: #505050
 }
 
@@ -24,26 +36,42 @@ h1.nav-title {
     list-style: none;
     /* background-color:  #909090; */
     /* background-color: #BFA3A8; */
-    background-color:#DEBDC3;
+    /* background-color:#DEBDC3; */
+    /* background-color: #d98997;*/
+
+    /* background-color: #dba2ad; */
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    text-transform: uppercase;
+    margin-top: 30px;
 }
 
 /* each link in nav bar */
-a.nav-link {
-    /* display: flex;
-    flex-direction: row;
-    justify-content: flex-end; */
+a.nav-link, a.logout-nav-link {
     margin-top: 0px;
     /* background-color: #909090; */
-    color: ghostwhite;
+    /* color: ghostwhite; */
+    /* color: #707070; */
     text-decoration: none;
     font-family: "Roboto Mono", sans-serif;
-    font-size: 20px;
+    font-size: 33px;
+    font-weight: 700;
+    padding: 8px 20px;
+    color: #dba2ad;
+    /* -webkit-text-stroke: 1px #707070; */
 }
 
 a.nav-link:hover {
-    color: #505050
+    background-color: #dba2ad;
+    border-radius: 3px;
+    color: ghostwhite;
+    transition: color 170ms ease-in-out, background-color 170ms ease-in-out;
 }
 
-/* a.nav-link: hover {
-    cursor: pointer
-} */
+a.logout-nav-link:hover {
+    background-color: ghostwhite;
+    border-radius: 3px;
+    border: 2px solid #dba2ad;
+    color: #dba2ad;
+    text-decoration: none;
+    transition: color 170ms ease-in-out, background-color 170ms ease-in-out;   
+}

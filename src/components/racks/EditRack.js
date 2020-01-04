@@ -100,22 +100,28 @@ export default class RackEditForm extends Component {
     render(){
         return(
             <React.Fragment>
+                {/* <h2 className="page-header">Edit Bike Rack</h2> */}
                             {this.state.imageUrl !== "" ?
                             <>
-                            <div className="pic-delete-icon">
+                            <div className="edit-box">
                             <img className="uploaded-image-edit" src={this.state.imageUrl} alt="" />
-                            <Tooltip title="Delete Photo" label="Delete Photo" placement="right">
+                            <div className="pic-delete-icon">
+                            <Tooltip title="Delete Photo" label="Delete Photo" >
                             <button className="delete-button" type="button" onClick={this.deleteImage}>
                             <DeleteOutlineIcon />
                             </button>
                             </Tooltip>
                             </div>
+                            </div>
                             </> : 
                             <>
                             <img className="uploaded-image" src={this.state.imageUrl} alt="" />
+                            <br></br>
+                            <div className="edit-box-upload-button">
                             <button onClick={this.uploadWidget.bind(this)} className="button">
                             Upload Photo
                             </button> 
+                            </div>
                             <br></br>
                             </>}
                 <form>
@@ -188,11 +194,12 @@ export default class RackEditForm extends Component {
                             
 
                             {/* <button type="button" onClick={this.addPhoto} */}
-
+                                <div className="form-buttons">
                                 <button type="button" disabled={this.state.loadingStatus}
                                 onClick={this.updateMyRack}
                                 className="button"
                             >Update Rack</button>
+                            </div>
 
             </React.Fragment>
         )

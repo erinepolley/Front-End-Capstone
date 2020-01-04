@@ -56,8 +56,8 @@ export default function RackCard(props) {
                         </CardContent>
                     </CardActionArea>
             <CardActions>
-                <Link to={`/edit/${props.rack.id}`}><button className="button">Edit</button></Link>
-                <button className= "button" type="button" onClick={() => {props.deleteThisRack(props.rack.id)}}>Delete</button>
+                <Link to={`/edit/${props.rack.id}`}><button className="card-button">Edit</button></Link>
+                <button className= "card-button" type="button" onClick={() => {props.deleteThisRack(props.rack.id)}}>Delete</button>
             </CardActions>
         </Card>
         </div>

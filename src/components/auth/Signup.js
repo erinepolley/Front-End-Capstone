@@ -49,15 +49,16 @@ export default class Signup extends Component {
         return (
             <>
                 <form onSubmit={this.handleSignup}>
-                    <fieldset>
+                    <fieldset className="login-form">
                     <img src={require('../BikeIcon.svg')} alt="Bike Stash icon" />
-                        <h1>Bike Stash</h1>
-                        <h2>Welcome!</h2>
-                        <h3>Sign up here.</h3>
+                        <h1 className="login-header">Bike Stash</h1>
+                        <h2>Welcome!</h2> 
+                        <h2>Please create an account.</h2>
                         <div className="formgrid">
                             <label htmlFor="email">Email Address:</label>
                             <br></br>
                             <input onChange={this.handleFieldChange} type="email"
+                                className="login-input"
                                 id="email"
                                 placeholder="todd@gmail.com"
                                 required autoFocus="" />
@@ -65,7 +66,7 @@ export default class Signup extends Component {
                             <label htmlFor="password">Password:</label>
                             <br></br>
                             <input onChange={this.handleFieldChange} type="password"
-                                className="password"
+                                className="login-input"
                                 id="password"
                                 placeholder="Password"
                                 required />
@@ -74,12 +75,12 @@ export default class Signup extends Component {
                             <br></br>
                             <input onChange={this.handleFieldChange} type="password"
                                 id="confirmPassword"
-                                className="password"
+                                className="login-input"
                                 placeholder="Confirm Password"
                                 required />
 
                         </div>
-                        <button type="submit">
+                        <button className="button" type="submit">
                             Register
                 </button>
                     </fieldset>

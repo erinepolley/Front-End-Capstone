@@ -46,6 +46,8 @@ export default class AddRack extends Component {
             event.preventDefault()
             this.setState({ loadingStatus: true })
             // this.sendLatLongToMap()
+
+            // Converting address to lat and lon
             ExternalApi.getLocationIQData(this.state.address)
             .then(response => {
     
@@ -59,13 +61,11 @@ export default class AddRack extends Component {
                     imageUrl: this.state.imageUrl,
                     longitude: response[0].lon,
                     latitude: response[0].lat
-    
                 }
-
-                console.log("LON AND LAT", response[0].lon, response[0].lat)
+                // console.log("LON AND LAT", response[0].lon, response[0].lat)
                 return rack
             })
-            .then(rackObj =>  Data.postRack(rackObj))
+            .then(rackObj => Data.postRack(rackObj))
             .then(() => this.props.history.push("/myracks"))
         }
     }
@@ -83,7 +83,7 @@ export default class AddRack extends Component {
 //TODO: then run add rack with lat and long keys equal to X and Y Cord.
 //TODO: otherwise, run the regular add rack 
 //TODO: HOWEVER, will have to have reverse geocoding to convert lat/lon values to address!!!
-
+//Getting lat annd lon from browser until line 105
     displayLocationInfo = (position) => {
         this.setState({
           xCord: position.coords.latitude,
@@ -95,13 +95,14 @@ export default class AddRack extends Component {
     getCurrentLocation = () => {
         console.log("AM I HERE?")
     if (navigator.geolocation) {
-        console.log("I can do it!")
+        // console.log("I can do it!")
         navigator.geolocation.getCurrentPosition(this.displayLocationInfo);
       } else {
-          console.log("Geolocation not supported.")
+          alert("Geolocation not supported.")
       }
     }
 
+    // Est types populates the dropdown so it doesn't show just numbers
     componentDidMount() {
         Data.getEstablishmentTypes()
             .then(types => this.setState({ establishmentTypes: types }))
@@ -111,10 +112,10 @@ export default class AddRack extends Component {
     render() {
         return (
             <>
+                <h2 className="form-header">Add a Bike Rack</h2>
                 <form>
                     <fieldset>
                         <div className="formgrid">
-
                             <label htmlFor="animalName">Name of Establishment:</label>
                             <br></br>
                             <input type="text" className="form-field" required onChange={this.handleFieldChange}
@@ -165,17 +166,19 @@ export default class AddRack extends Component {
                                 id="comments" rows="10" className="form-field" placeholder="near side patio" />
                             <br></br>
                         </div>
-
-                        <img className="uploaded-image" src={this.state.imageUrl} alt="" />
-
                     </fieldset>
                 </form>
+                        <div className="uploaded-photo">
+                        <img className="uploaded-image" src={this.state.imageUrl} alt="" />
+                        </div>
+                <div className="form-buttons">
                 <button onClick={this.uploadWidget.bind(this)} className="button">
                     Upload Photo
                         </button>
 
                 <button type="button" className="button" disabled={this.state.loadingStatus}
                     onClick={this.addNewRack}>Add Rack</button>
+                </div>
             </>
         )
     }

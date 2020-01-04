@@ -69,7 +69,7 @@
   "racks": [
     {
       "id": 4,
-      "userId": 4,
+      "userId": 1,
       "capacity": 6,
       "address": "320 E Trinity Ln, Nashville, TN 37207",
       "establishmentName": "East Nashville Beer Works",
@@ -92,16 +92,16 @@
       "latitude": "36.0968686"
     },
     {
+      "id": 7,
       "userId": 4,
-      "capacity": 9,
+      "capacity": 8,
       "address": "101 Van Buren St, Nashville, TN 37208",
       "establishmentName": "Bearded Iris",
       "establishmentTypeId": 1,
       "comments": "Hidden in the back where mural is",
-      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/fq45ybydqzj2rotd2fcc",
-      "longitude": -86.786174,
-      "latitude": 36.181424,
-      "id": 7
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/buqqdwe8scremxmdum5k",
+      "longitude": "-86.786174",
+      "latitude": "36.181424"
     },
     {
       "userId": 3,
@@ -128,7 +128,7 @@
       "latitude": 36.1273243797296
     },
     {
-      "userId": 4,
+      "userId": 1,
       "capacity": 12,
       "address": "3 City Ave #200, Nashville, TN 37209",
       "establishmentName": "Avo",
@@ -200,20 +200,8 @@
       "latitude": "36.1441053886382"
     },
     {
-      "id": 25,
-      "userId": 12,
-      "capacity": 10,
-      "address": "1800 14th Ave N, Nashville, TN",
-      "establishmentName": "HI",
-      "establishmentTypeId": 2,
-      "comments": "HI",
-      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/dgn0kiqg0msdbl3waxbf",
-      "longitude": "-86.807846",
-      "latitude": "36.180805"
-    },
-    {
       "id": 26,
-      "userId": 4,
+      "userId": 2,
       "capacity": 8,
       "address": "431 11th Ave N, Nashville, TN 37203",
       "establishmentName": "ML ROSE",
@@ -222,18 +210,6 @@
       "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/gztawnizwradjccjbpbj",
       "longitude": "-86.7909379067836",
       "latitude": "36.1630323997308"
-    },
-    {
-      "userId": 4,
-      "capacity": 4,
-      "address": "1907 Eastland Ave, Nashville, TN 37206",
-      "establishmentName": "Rosepepper",
-      "establishmentTypeId": 1,
-      "comments": "near side patio",
-      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/noeq12o1nmcurch1saen",
-      "longitude": "-86.7348796666667",
-      "latitude": "36.1826703333333",
-      "id": 27
     }
   ],
   "establishmentTypes": [
