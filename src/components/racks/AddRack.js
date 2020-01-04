@@ -95,10 +95,10 @@ export default class AddRack extends Component {
     getCurrentLocation = () => {
         console.log("AM I HERE?")
     if (navigator.geolocation) {
-        console.log("I can do it!")
+        // console.log("I can do it!")
         navigator.geolocation.getCurrentPosition(this.displayLocationInfo);
       } else {
-          console.log("Geolocation not supported.")
+          alert("Geolocation not supported.")
       }
     }
 
@@ -166,17 +166,19 @@ export default class AddRack extends Component {
                                 id="comments" rows="10" className="form-field" placeholder="near side patio" />
                             <br></br>
                         </div>
-
-                        <img className="uploaded-image" src={this.state.imageUrl} alt="" />
-
                     </fieldset>
                 </form>
+                        <div className="uploaded-photo">
+                        <img className="uploaded-image" src={this.state.imageUrl} alt="" />
+                        </div>
+                <div className="form-buttons">
                 <button onClick={this.uploadWidget.bind(this)} className="button">
                     Upload Photo
                         </button>
 
                 <button type="button" className="button" disabled={this.state.loadingStatus}
                     onClick={this.addNewRack}>Add Rack</button>
+                </div>
             </>
         )
     }

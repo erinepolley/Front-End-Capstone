@@ -36,7 +36,8 @@
 #map {
   height: 700px;
   width: 100%;
-  margin: 20px auto auto 0px; 
+  margin: 5px auto auto 0px; 
+  /* z-index: -1; */
   /* 0 auto; */
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  */
 }
@@ -46,9 +47,15 @@
   /* font-size: 100px; */
 }
 
-.uploaded-image {
-  width: 300px;
-} 
+p.map-text {
+  font-size: 21px;
+  margin-bottom: 0px;
+}
+
+p.other-map-text{
+  font-size: 16px;
+  margin: 8px 0px 0px 0px;
+}
 
 body {
 font-family: "Josefin Sans", sans-serif;
@@ -87,12 +94,6 @@ fieldset.login-form {
   font-family: 'Josefin Sans', sans-serif;
 }
 
-.formgrid {
-  /* max-width: 400px; */
-  text-align: center;
-  padding: 10px;
-  /* padding: 20px 20px 20px 700px; */
-}
 
 .register-link {
   font-family: 'Josefin Sans', sans-serif;

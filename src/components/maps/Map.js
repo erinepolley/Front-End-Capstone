@@ -3,6 +3,9 @@ import L from 'leaflet';
 import API from '../../modules/Data'
 import ExternalApi from '../../modules/ExternalApi'
 import Token from '../../ApiKeys';
+import App from '../App';
+import '../App.css'
+
 const dummyDataPath = [
   [36.134842046153565, -86.75954818725587],
   [36.1339408866672, -86.75899028778078],
@@ -51,11 +54,11 @@ export default class Map extends Component {
         L.marker([rack.latitude, rack.longitude])
           .bindPopup(
             `<img src= "${rack.imageUrl}" width=60%/> <br>
-            <strong>Name:</strong> ${rack.establishmentName}<br>
-            <strong>Type:</strong> ${rack.establishmentType.establishmentType}<br>
-            <strong>Address:</strong> ${rack.address} <br>
-            <strong>Capacity:</strong> ${rack.capacity} <br>
-            <strong>Comments:</strong> ${rack.comments}
+            <p class="map-text"><strong>Name:</strong> ${rack.establishmentName}</p>
+            <p class="other-map-text"><strong>Type:</strong> ${rack.establishmentType.establishmentType}</p>
+            <p class="other-map-text"><strong>Address:</strong> ${rack.address} </p>
+            <p class="other-map-text"><strong>Capacity:</strong> ${rack.capacity} </p>
+            <p class="other-map-text"><strong>Comments:</strong> ${rack.comments} </p>
   `
           )
           .addTo(this.map)
@@ -72,10 +75,11 @@ export default class Map extends Component {
         // console.log(govRack)
         L.marker([govRack.the_geom.coordinates[1], govRack.the_geom.coordinates[0]])
           .bindPopup(
-            `Name: ${govRack.location} <br>
-        Address: ${govRack.detail_loc} <br>
-        Capacity: ${govRack.capacity} <br>
-        Comments: ${govRack.location}`
+            // `Name: ${govRack.location} <br>
+        `<p class="map-text"><strong>Name:</strong> ${govRack.detail_loc} </p>
+        <p class="other-map-text"><strong>Type:</strong> ${govRack.location} </p>
+        <p class="other-map-text"><strong>Capacity:</strong> ${govRack.capacity} </p>
+        <p class="other-map-text"><strong>Comments:</strong> ${govRack.location}</p>`
           )
           .addTo(this.map)
       })

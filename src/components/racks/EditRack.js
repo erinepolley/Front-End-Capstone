@@ -100,6 +100,7 @@ export default class RackEditForm extends Component {
     render(){
         return(
             <React.Fragment>
+                {/* <h2 className="page-header">Edit Bike Rack</h2> */}
                             {this.state.imageUrl !== "" ?
                             <>
                             <div className="edit-box">
@@ -114,8 +115,9 @@ export default class RackEditForm extends Component {
                             </div>
                             </> : 
                             <>
-                            <div className="edit-box">
                             <img className="uploaded-image" src={this.state.imageUrl} alt="" />
+                            <br></br>
+                            <div className="edit-box-upload-button">
                             <button onClick={this.uploadWidget.bind(this)} className="button">
                             Upload Photo
                             </button> 
@@ -192,11 +194,12 @@ export default class RackEditForm extends Component {
                             
 
                             {/* <button type="button" onClick={this.addPhoto} */}
-
+                                <div className="form-buttons">
                                 <button type="button" disabled={this.state.loadingStatus}
                                 onClick={this.updateMyRack}
                                 className="button"
                             >Update Rack</button>
+                            </div>
 
             </React.Fragment>
         )

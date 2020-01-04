@@ -94,12 +94,12 @@
     {
       "id": 7,
       "userId": 4,
-      "capacity": 9,
+      "capacity": 8,
       "address": "101 Van Buren St, Nashville, TN 37208",
       "establishmentName": "Bearded Iris",
       "establishmentTypeId": 1,
       "comments": "Hidden in the back where mural is",
-      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/akf3obw8nkkfgdmwi36a",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/buqqdwe8scremxmdum5k",
       "longitude": "-86.786174",
       "latitude": "36.181424"
     },
