@@ -99,7 +99,7 @@
       "establishmentName": "Bearded Iris",
       "establishmentTypeId": 1,
       "comments": "Hidden in the back where mural is",
-      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/buqqdwe8scremxmdum5k",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/deolaehcdbmsncccxly8",
       "longitude": "-86.786174",
       "latitude": "36.181424"
     },
@@ -118,14 +118,14 @@
     {
       "id": 9,
       "userId": 4,
-      "capacity": 14,
+      "capacity": 13,
       "address": "2316 12th Ave S, Nashville, TN 37204",
       "establishmentName": "Josephine",
       "establishmentTypeId": 1,
       "comments": "on top deck of parking garage",
       "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/xlwgnb0jtnxhjdksexeg",
-      "longitude": -86.7890597607754,
-      "latitude": 36.1273243797296
+      "longitude": "-86.7890597607754",
+      "latitude": "36.1273243797296"
     },
     {
       "userId": 1,
@@ -152,16 +152,16 @@
       "id": 11
     },
     {
+      "id": 12,
       "userId": 4,
-      "capacity": 4,
+      "capacity": 5,
       "address": "4021 Hillsboro Pike, Nashville, TN 37215",
       "establishmentName": "Whole Foods",
       "establishmentTypeId": 4,
       "comments": "beside the parking garage",
       "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/iqeamzqtwitlsws9scqg",
-      "longitude": -86.816398387347,
-      "latitude": 36.103207024386,
-      "id": 12
+      "longitude": "-86.816398387347",
+      "latitude": "36.103207024386"
     },
     {
       "userId": 5,
