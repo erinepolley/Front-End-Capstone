@@ -100,7 +100,7 @@ export default class RackEditForm extends Component {
     render(){
         return(
             <React.Fragment>
-                {/* <h2 className="page-header">Edit Bike Rack</h2> */}
+                <h2 className="form-header">Edit Bike Rack</h2>
                             {this.state.imageUrl !== "" ?
                             <>
                             <div className="edit-box">

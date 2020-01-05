@@ -66,14 +66,16 @@ h1, h2 {
   font-family: "Roboto Mono", sans-serif;
   }
 
-img {
+.welcome-image {
   width: 200px;
-
-  /* max-width: 345px; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* All the forms!! */
 fieldset.login-form {
   text-align: center;
+  background-color: white;
 }
 /* Bike Stash on login and signup pages */
 .login-header {
