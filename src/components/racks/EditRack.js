@@ -99,10 +99,8 @@ export default class RackEditForm extends Component {
 
     render(){
         return(
-            <>
-            
-                <h1 className="page-header">Edit Bike Rack</h1>
-                        <div className="formgrid">
+            <React.Fragment>
+                {/* <h2 className="page-header">Edit Bike Rack</h2> */}
                             {this.state.imageUrl !== "" ?
                             <>
                             <div className="edit-box">
@@ -126,9 +124,10 @@ export default class RackEditForm extends Component {
                             </div>
                             <br></br>
                             </>}
+                <form>
+                    <fieldset>
+                        <div className="formgrid">
 
-                            <form>
-                             <fieldset>
                             <label htmlFor="establishmentName">Name of Establishment:</label>
                             <br></br>
                             <input
@@ -189,10 +188,12 @@ export default class RackEditForm extends Component {
                                 value={this.state.comments}
                             />
                             <br></br>
+                            </div>
                             </fieldset>
                         </form>
-                            </div>
-                    
+                            
+
+                            {/* <button type="button" onClick={this.addPhoto} */}
                                 <div className="form-buttons">
                                 <button type="button" disabled={this.state.loadingStatus}
                                 onClick={this.updateMyRack}
@@ -200,7 +201,7 @@ export default class RackEditForm extends Component {
                             >Update Rack</button>
                             </div>
 
-            </>
+            </React.Fragment>
         )
                                 
     }

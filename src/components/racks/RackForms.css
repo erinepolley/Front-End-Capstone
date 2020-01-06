@@ -305,3 +305,7 @@ input.form-field, select {
     border: 2px solid #adb0b4;
   }
 
+  input::placeholder {
+      color: #adb0b4;   
+  }
+

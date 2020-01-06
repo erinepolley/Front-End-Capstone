@@ -17,7 +17,7 @@ export default class MyRacks extends Component {
         Data.getMyRacks(parseInt(localStorage.getItem("credentials")))
         .then(racksArray => {
             this.setState({
-                racks: racksArray
+                racks: racksArray.reverse()
             })
         })
     }
@@ -31,7 +31,7 @@ export default class MyRacks extends Component {
                 Data.getMyRacks(parseInt(localStorage.getItem("credentials")))
                     .then(newRacks => {
                         this.setState({
-                            racks: newRacks
+                            racks: newRacks.reverse()
                         })
                     })
             })

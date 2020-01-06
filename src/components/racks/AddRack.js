@@ -116,8 +116,7 @@ export default class AddRack extends Component {
     render() {
         return (
             <>
-                <form>
-                    <fieldset>
+
                 <h1 className="page-header">Add a Bike Rack</h1>
                     <div className="formgrid">
                     {this.state.imageUrl !== "" ?
@@ -144,17 +143,18 @@ export default class AddRack extends Component {
                             <br></br>
                             </>}
 
-                       
+                            <form>
+                            <fieldset>
                             <label htmlFor="animalName">Name of Establishment:</label>
                             <br></br>
                             <input type="text" className="form-field" required onChange={this.handleFieldChange}
-                                id="establishmentName" placeholder="Rosepepper" />
+                                id="establishmentName" placeholder=" ex. Rosepepper" />
                             <br></br>
 
                             <label htmlFor="address">Address:</label>
                             <br></br>
                             <input type="text" className="form-field" required onChange={this.handleFieldChange}
-                                id="address" placeholder="1907 Eastland Ave., Nashville, TN" value={this.state.address} />
+                                id="address" placeholder="ex. 1907 Eastland Ave., Nashville, TN" value={this.state.address} />
 
                                 <Tooltip title="Use Current Location" label="Use Current Location" placement="right" className="tooltiptext">
                                 <button className="location-button" type="button" onClick={this.getCurrentLocation}>
@@ -186,17 +186,17 @@ export default class AddRack extends Component {
                             <label htmlFor="capacity">Capacity:</label>
                             <br></br>
                             <input type="number" required onChange={this.handleFieldChange}
-                                id="capacity" className="form-field" placeholder="6" />
+                                id="capacity" className="form-field" placeholder="ex. 6" />
                             <br></br>
 
                             <label htmlFor="comments">Comments:</label>
                             <br></br>
                             <input type="textfield" required onChange={this.handleFieldChange}
-                                id="comments" rows="10" className="form-field" placeholder="near side patio" />
+                                id="comments" rows="10" className="form-field" placeholder="ex. near side patio" />
                             <br></br>
-                        </div>
                     </fieldset>
                 </form>
+                        </div>
 
                  <div className="form-buttons">
                 <button type="button" className="button"  disabled={this.state.loadingStatus}
