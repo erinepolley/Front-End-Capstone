@@ -5,12 +5,12 @@ This application allows users see where bike racks are located in Nashville. Dat
 I love to ride my bike around Nashville. I wanted to make it easier on myself and my fellow bike lovers to get around town, as well as make Nashville a little bit more bike friendly. It would be nice to see if wherever I'm going has a bike rack, or if I'm going to have to ride around for a minute and lock my bike to a random parking meter/skinny tree/wrought iron fence.
 
 ## MVP
--Create account/account login
--Map which renders all rack locations as pins
--Can click on pins to display a popup with details
--Nav bar with "Home", “My Racks”, “Logout”, “Add a Rack”
--“My Racks”--gets all racks from JSON that the user has added (with edit and delete capabilities)
--“Add a Rack”--renders form for user to add rack
+-Create account/account login  
+-Map which renders all rack locations as pins  
+-Can click on pins to display a popup with details  
+-Nav bar with "Home", “My Racks”, “Logout”, “Add a Rack”  
+-“My Racks”--gets all racks from JSON that the user has added (with edit and delete capabilities)  
+-“Add a Rack”--renders form for user to add rack  
 
 ## Tools Used
 React, JSON, Leaflet, Mapbox, Cloudinary, LocationIQ, Material-UI, Nashville.gov external API
