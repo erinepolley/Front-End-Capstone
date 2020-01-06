@@ -1,7 +1,8 @@
 import Token from "../ApiKeys"
 
 const nashGovUrl = "https://data.nashville.gov/resource/yjju-hypq.json/?status=Existing"
-const locationIQUrl = `https://eu1.locationiq.com/v1/search.php?key=${Token.locationIQToken}`
+const locationIQUrl = `https://us1.locationiq.com/v1/`
+
 export default {
 getGovApiData () {
     return fetch(`${nashGovUrl}`,
@@ -15,12 +16,15 @@ getGovApiData () {
 },
 
 getLocationIQData (searchString) {
-    return fetch(`${locationIQUrl}&q=${searchString}&format=json`)
+    return fetch(`${locationIQUrl}search.php?key=${Token.locationIQToken}&q=${searchString}&format=json`)
     .then(response => response.json())
     // .then(response => console.log("RESPONSE FROM IQ", response))
+},
+
+getLocationIQAddress (lat, lon) {
+    return fetch(`${locationIQUrl}reverse.php?key=${Token.locationIQToken}&lat=${lat}&lon=${lon}&format=json`)
+    .then(response => response.json())
 }
-
-
 
 
 

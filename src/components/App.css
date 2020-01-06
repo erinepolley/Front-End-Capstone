@@ -48,31 +48,38 @@
 }
 
 p.map-text {
-  font-size: 21px;
+  font-size: 26px;
   margin-bottom: 0px;
+  font-family: 'Roboto Mono', sans-serif;
 }
 
 p.other-map-text{
-  font-size: 16px;
+  font-size: 19px;
   margin: 8px 0px 0px 0px;
+  font-family: 'Roboto Mono', sans-serif;
+  letter-spacing: -.06em;
+
 }
 
 body {
 font-family: "Josefin Sans", sans-serif;
+background-color: #F8F8F8;
 }
 
 h1, h2 {
   font-family: "Roboto Mono", sans-serif;
   }
 
-img {
+.welcome-image {
   width: 200px;
-
-  /* max-width: 345px; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* All the forms!! */
 fieldset.login-form {
   text-align: center;
+  background-color: white;
 }
 /* Bike Stash on login and signup pages */
 .login-header {
@@ -110,7 +117,8 @@ fieldset.login-form {
 }
 /* label for input fields in whole app */
 label {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Roboto Mono", sans-serif;
+  margin-bottom: 5px;
   margin-top: 35px;
   font-size: 28px;
 }

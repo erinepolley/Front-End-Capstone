@@ -39,7 +39,8 @@ export default class Login extends Component {
             <>
           <form onSubmit={this.handleLogin}>
             <fieldset className="login-form">
-                <img src={require('../BikeIcon.svg')} alt="Bike Stash icon" />
+              
+                <img className="welcome-image" src={require('../BikeIcon.svg')} alt="Bike Stash icon" />
                 <h1 className="login-header">Bike Stash</h1>
                 <h2>Welcome! Please sign in.</h2>
                 

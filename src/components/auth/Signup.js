@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import Data from '../../modules/Data'
+import '../App.css'
 
 export default class Signup extends Component {
     state = {
@@ -50,7 +51,7 @@ export default class Signup extends Component {
             <>
                 <form onSubmit={this.handleSignup}>
                     <fieldset className="login-form">
-                    <img src={require('../BikeIcon.svg')} alt="Bike Stash icon" />
+                    <img className="welcome-image" src={require('../BikeIcon.svg')} alt="Bike Stash icon" />
                         <h1 className="login-header">Bike Stash</h1>
                         <h2>Welcome!</h2> 
                         <h2>Please create an account.</h2>

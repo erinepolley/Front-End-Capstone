@@ -3,7 +3,9 @@ import Data from '../../modules/Data'
 import ExternalApi from '../../modules/ExternalApi'
 import MyLocationIcon from '@material-ui/icons/MyLocation';
 import Tooltip from '@material-ui/core/Tooltip'
+import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline'
 import './RackForms.css'
+// import '../App.css'
 
 export default class AddRack extends Component {
     state = {
@@ -17,21 +19,16 @@ export default class AddRack extends Component {
         establishmentTypes: [],
         longitude: "",
         latitude: "",
-        xCord: "",
-        yCord: "",
         loadingStatus: false
     }
-
-    // sendLatLongToMap() {
-    //     ExternalApi.getLocationIQData(this.state.address)
-    //         .then(object => {
-    //             this.setState({
-    //                 longitude: object[0].lon,
-    //                 latitude: object[0].lat
-    //             })
-    //             console.log("LON AND LAT", this.state.longitude, this.state.latitude)
-    //         })
-    // }
+// Deletes image if user decides not to use it
+    deleteImage = event => {
+        event.preventDefault()
+        if(window.confirm("Are you sure you want to delete this photo?")) {
+        this.setState({ imageUrl: "" })
+        // console.log("STATE AFTER DELETE RACK IN EDIT FORM", this.state)
+    }
+}
 
     handleFieldChange = event => {
         const stateToChange = {}
@@ -86,11 +83,18 @@ export default class AddRack extends Component {
 //Getting lat annd lon from browser until line 105
     displayLocationInfo = (position) => {
         this.setState({
-          xCord: position.coords.latitude,
-          yCord: position.coords.longitude
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude
         })
         console.log(this.state)
-    }
+        ExternalApi.getLocationIQAddress(this.state.latitude, this.state.longitude)
+        .then(response => {
+            this.setState({
+                address: response.display_name
+            })
+        console.log(this.state)
+    })
+}
 
     getCurrentLocation = () => {
         console.log("AM I HERE?")
@@ -112,10 +116,35 @@ export default class AddRack extends Component {
     render() {
         return (
             <>
-                <h2 className="form-header">Add a Bike Rack</h2>
                 <form>
                     <fieldset>
-                        <div className="formgrid">
+                <h1 className="page-header">Add a Bike Rack</h1>
+                    <div className="formgrid">
+                    {this.state.imageUrl !== "" ?
+                            <>
+                            <div className="edit-box">
+                            <img className="uploaded-image-edit" src={this.state.imageUrl} alt="" />
+                            <div className="pic-delete-icon">
+                            <Tooltip title="Delete Photo" label="Delete Photo" >
+                            <button className="delete-button" type="button" onClick={this.deleteImage}>
+                            <DeleteOutlineIcon />
+                            </button>
+                            </Tooltip>
+                            </div>
+                            </div>
+                            </> : 
+                            <>
+                            <img className="uploaded-image" src={this.state.imageUrl} alt="" />
+                            <br></br>
+                            <div className="edit-box-upload-button">
+                            <button onClick={this.uploadWidget.bind(this)} className="button">
+                            Upload Photo
+                            </button> 
+                            </div>
+                            <br></br>
+                            </>}
+
+                       
                             <label htmlFor="animalName">Name of Establishment:</label>
                             <br></br>
                             <input type="text" className="form-field" required onChange={this.handleFieldChange}
@@ -125,7 +154,7 @@ export default class AddRack extends Component {
                             <label htmlFor="address">Address:</label>
                             <br></br>
                             <input type="text" className="form-field" required onChange={this.handleFieldChange}
-                                id="address" placeholder="1907 Eastland Ave., Nashville, TN" />
+                                id="address" placeholder="1907 Eastland Ave., Nashville, TN" value={this.state.address} />
 
                                 <Tooltip title="Use Current Location" label="Use Current Location" placement="right" className="tooltiptext">
                                 <button className="location-button" type="button" onClick={this.getCurrentLocation}>
@@ -168,15 +197,9 @@ export default class AddRack extends Component {
                         </div>
                     </fieldset>
                 </form>
-                        <div className="uploaded-photo">
-                        <img className="uploaded-image" src={this.state.imageUrl} alt="" />
-                        </div>
-                <div className="form-buttons">
-                <button onClick={this.uploadWidget.bind(this)} className="button">
-                    Upload Photo
-                        </button>
 
-                <button type="button" className="button" disabled={this.state.loadingStatus}
+                 <div className="form-buttons">
+                <button type="button" className="button"  disabled={this.state.loadingStatus}
                     onClick={this.addNewRack}>Add Rack</button>
                 </div>
             </>
