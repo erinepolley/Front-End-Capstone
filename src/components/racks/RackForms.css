@@ -118,13 +118,21 @@ h1.card-header {
     background-color: white;
     font-size: 35px;
     color: #505050;
+
 }
 
 h1.page-header {
     text-align: center;
     font-size: 50px;
     margin-top: 50px;
-    color: #505050;
+    color: #64deca;
+    font-weight: 800;
+    letter-spacing: -.01em;
+    word-spacing: -.15em;
+    /* text-shadow: -1px 1px 0 gainsboro, 
+    1px 1px 0 gainsboro, 
+   1px -1px 0 gainsboro, 
+  -1px -1px 0 gainsboro;  */
 }
 
 h2.page-header {
@@ -258,7 +266,7 @@ img.uploaded-image-edit {
 
 .form-header {
     margin-top: 40px;
-    margin-bottom: 0px;
+    margin-bottom: 30px;
     font-size: 40px;
     text-align: center;
     color: #505050
@@ -272,7 +280,7 @@ img.uploaded-image-edit {
   /* background-color: #F8F8F8; */
   padding: 20px;
   text-align: center;
-  padding: 50px 10px 60px 10px;
+  padding: 40px 10px 60px 10px;
   width: 700px;
   margin-left: auto;
   margin-right: auto;

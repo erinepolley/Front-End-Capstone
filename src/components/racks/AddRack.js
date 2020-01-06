@@ -21,17 +21,14 @@ export default class AddRack extends Component {
         latitude: "",
         loadingStatus: false
     }
-
-    // sendLatLongToMap() {
-    //     ExternalApi.getLocationIQData(this.state.address)
-    //         .then(object => {
-    //             this.setState({
-    //                 longitude: object[0].lon,
-    //                 latitude: object[0].lat
-    //             })
-    //             console.log("LON AND LAT", this.state.longitude, this.state.latitude)
-    //         })
-    // }
+// Deletes image if user decides not to use it
+    deleteImage = event => {
+        event.preventDefault()
+        if(window.confirm("Are you sure you want to delete this photo?")) {
+        this.setState({ imageUrl: "" })
+        // console.log("STATE AFTER DELETE RACK IN EDIT FORM", this.state)
+    }
+}
 
     handleFieldChange = event => {
         const stateToChange = {}
@@ -119,10 +116,10 @@ export default class AddRack extends Component {
     render() {
         return (
             <>
-                <h2 className="form-header">Add a Bike Rack</h2>
                 <form>
                     <fieldset>
-
+                <h1 className="page-header">Add a Bike Rack</h1>
+                    <div className="formgrid">
                     {this.state.imageUrl !== "" ?
                             <>
                             <div className="edit-box">
@@ -147,7 +144,7 @@ export default class AddRack extends Component {
                             <br></br>
                             </>}
 
-                        <div className="formgrid">
+                       
                             <label htmlFor="animalName">Name of Establishment:</label>
                             <br></br>
                             <input type="text" className="form-field" required onChange={this.handleFieldChange}
@@ -200,16 +197,8 @@ export default class AddRack extends Component {
                         </div>
                     </fieldset>
                 </form>
-                        {/* <div className="uploaded-photo">
-                        <img className="uploaded-image" src={this.state.imageUrl} alt="" />
-                        </div> */}
-                 <div className="form-buttons">
-                {/* <button onClick={this.uploadWidget.bind(this)} className="button">
-                    Upload Photo
-                        </button>
-                        <br></br>
-                        <br></br> */}
 
+                 <div className="form-buttons">
                 <button type="button" className="button"  disabled={this.state.loadingStatus}
                     onClick={this.addNewRack}>Add Rack</button>
                 </div>
