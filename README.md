@@ -1,8 +1,8 @@
 # Bike Stash: NSS Front End Capstone
-This application that shows on a map where bike racks are located in Nashville. Data is crowd-sourced by users and stored in JSON. The user can log in and add, edit, and delete bike racks they have seen around town. A map on the home page shows the user where  ALL the added racks are, not just theirs. 
+Bike Stash is a single page application that shows users where all the bike racks are located in Nashville. Users can look on a custom Mapbox map and see if where they're going 1) has a bike rack, and 2) where it is, because they can be hard to find. Data is obtained from the Nashville.gov external API as well as crowd-sourced by users and stored in JSON. The user can log in and add, edit, and delete bike racks they have seen around town. A map on the home page shows the user where  ALL the added racks are, not just theirs. 
 
 ## Why I Made This
-I love to ride my bike around Nashville. I wanted to make it easier on myself and my fellow bike lovers to get around town, as well as make Nashville a little bit more bike friendly. It would be nice to see if wherever I'm going has a bike rack, or if I'm going to have to ride around for a minute and lock my bike to a random parking meter/skinny tree/wrought iron fence.
+I love to ride my bike around Nashville. It is one of my favorite things to do. I wanted to make it easier on myself and fellow bike lovers to get around, as well as make Nashville a bit more bike friendly, so I created Bike Stash.
 
 ## Demo
 ![Bike Stash Gif Demo](src/demo/Bestgif.gif)
