@@ -5,7 +5,7 @@ This application that shows on a map where bike racks are located in Nashville. 
 I love to ride my bike around Nashville. I wanted to make it easier on myself and my fellow bike lovers to get around town, as well as make Nashville a little bit more bike friendly. It would be nice to see if wherever I'm going has a bike rack, or if I'm going to have to ride around for a minute and lock my bike to a random parking meter/skinny tree/wrought iron fence.
 
 ## Demo
-![Bike Stash Gif Demo](src/demo/demo.gif)
+![Bike Stash Gif Demo](src/demo/Bestgif.gif)
 
 
 ## MVP
