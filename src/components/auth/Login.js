@@ -50,7 +50,7 @@ export default class Login extends Component {
                 <input onChange={this.handleFieldChange} type="email"
                         id="email"
                         className="login-input"
-                        placeholder="helena@gmail.com"
+                        placeholder="Email"
                         required autoFocus="" />
                 <br></br>
                 <label htmlFor="inputPassword">Password:</label>

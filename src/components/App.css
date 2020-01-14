@@ -34,17 +34,13 @@
 }
 
 #map {
-  height: 700px;
+  height: 800px;
   width: 100%;
   margin: 5px auto auto 0px; 
-  /* z-index: -1; */
-  /* 0 auto; */
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  */
 }
 
 .nav-title {
   font-family: "Roboto Mono", sans-serif;
-  /* font-size: 100px; */
 }
 
 p.map-text {
@@ -64,6 +60,7 @@ p.other-map-text{
 body {
 font-family: "Josefin Sans", sans-serif;
 background-color: #F8F8F8;
+height: 100%;
 }
 
 h1, h2 {
@@ -75,11 +72,13 @@ h1, h2 {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 75px;
 }
 /* All the forms!! */
 fieldset.login-form {
   text-align: center;
   background-color: white;
+  
 }
 /* Bike Stash on login and signup pages */
 .login-header {
