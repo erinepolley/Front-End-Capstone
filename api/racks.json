@@ -80,7 +80,7 @@
       "establishmentName": "East Nashville Beer Works",
       "establishmentTypeId": 1,
       "comments": "In the front of the bar",
-      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/b9ro6gfbl51aq22szw7s",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/zpobwhz9atl0zog4tdou",
       "longitude": "-86.7632038301232",
       "latitude": "36.20526205"
     },
@@ -157,30 +157,6 @@
       "latitude": "36.1630323997308"
     },
     {
-      "userId": 4,
-      "capacity": 4,
-      "address": "4021 Hillsboro Pike, Nashville, TN 37215",
-      "establishmentName": "Whole Foods",
-      "establishmentTypeId": 4,
-      "comments": "beside the parking garage",
-      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/uqkbmzbuqora0uomezb0",
-      "longitude": "-86.816398387347",
-      "latitude": "36.103207024386",
-      "id": 27
-    },
-    {
-      "userId": 4,
-      "capacity": 13,
-      "address": "2316 12th Ave S, Nashville, TN 37204",
-      "establishmentName": "Josephine",
-      "establishmentTypeId": 1,
-      "comments": "on top deck of parking garage",
-      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/susfybrmat0amtbwwrnm",
-      "longitude": "-86.7890597607754",
-      "latitude": "36.1273243797296",
-      "id": 28
-    },
-    {
       "id": 29,
       "userId": 4,
       "capacity": 8,
@@ -193,16 +169,16 @@
       "latitude": "36.1367878571429"
     },
     {
+      "id": 30,
       "userId": 4,
-      "capacity": 12,
+      "capacity": 10,
       "address": "101 Van Buren St, Nashville, TN 37208",
       "establishmentName": "Bearded Iris",
       "establishmentTypeId": 1,
       "comments": "Hidden in the back where mural is",
-      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/qlpdxoycg5bpgumm4lvn",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/prhsfxxnupeiy2d76fc2",
       "longitude": "-86.786174",
-      "latitude": "36.181424",
-      "id": 30
+      "latitude": "36.181424"
     },
     {
       "userId": 4,
@@ -215,6 +191,30 @@
       "longitude": "-86.8766429",
       "latitude": "36.0968686",
       "id": 31
+    },
+    {
+      "id": 32,
+      "userId": 4,
+      "capacity": 13,
+      "address": "1907 Eastland Ave. Nashville, TN",
+      "establishmentName": "Rosepepper",
+      "establishmentTypeId": 1,
+      "comments": "near side patio",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/ma8hfbzoqkmzbwtaeq96",
+      "longitude": "-86.7348796666667",
+      "latitude": "36.1826703333333"
+    },
+    {
+      "userId": 4,
+      "capacity": 12,
+      "address": "2147, 18th Ave N, Nashville, Davidson County, Tennessee, 37208, USA",
+      "establishmentName": "Jefferson St. Cafe",
+      "establishmentTypeId": 5,
+      "comments": "in back",
+      "imageUrl": "https://res.cloudinary.com/dbclxrl30/image/upload/v1576090193/Bike_Stash/fnjudmelhyvvnmlphvt6",
+      "longitude": "-86.8123696249937",
+      "latitude": "36.1862157508156",
+      "id": 33
     }
   ],
   "establishmentTypes": [
